@@ -1,0 +1,51 @@
+label {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-weight: 600;
+  font-size: 25px;
+  display: block;
+  padding-bottom: 20px;
+}
+
+.status-message {
+  color: black;
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+input {
+  height: 30px;
+  width: 210px;
+  background: #272626;
+  color: #e2d8e1;
+  border: 1px solid #e2d8e1;
+  padding: 0px 10px;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  -webkit-appearance: none;
+}
+input:focus {
+  outline: none;
+}
+.email-submit {
+  color: #e2d8e1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border-color: "#e2d8e";
+  border: 1px solid;
+  border-left: 0px;
+  padding-top: 2px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+::placeholder {
+  color: #e2d8e1;
+  opacity: 1;
+}

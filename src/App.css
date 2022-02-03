@@ -1,0 +1,21 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  background: #161013;
+  background-image: url("./images/all-grey-pow.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 180vw 180vh;
+  color: #e2d8e1;
+}
+
+@media only screen and (max-width: 768px) {
+  .App-logo {
+    height: 90vmin;
+  }
+
+  h3 {
+    max-width: 100vw;
+  }
+}
