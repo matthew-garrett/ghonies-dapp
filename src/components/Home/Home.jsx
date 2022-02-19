@@ -150,10 +150,10 @@ const Home = () => {
         )} */}
           </>
         )}
-        {error && error.name === "UnsupportedChainIdError" && (
+        {error && error.message.includes("Unsupported") && (
           <div>Please connect your wallet to Rinkeby</div>
         )}
-        {error && error.name !== "UnsupportedChainIdError" && (
+        {error && !error.message.includes("Unsupported") && (
           <div>{error.message}</div>
         )}
       </ButtonWrapper>
