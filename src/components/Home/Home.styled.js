@@ -1,15 +1,22 @@
 import styled from "styled-components";
 
 export const ActionButton = styled.button`
-  z-index: 2;
-  font-size: 20px;
   padding: 15px;
   border-radius: 7px;
   cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  background: #e2d8e1;
+  color: #434043;
+  font-weight: 700;
+  font-size: 20px;
+  border: none;
+  transition: ease 0.5s;
+  &:hover {
+    background: #b4acb4;
+  }
 `;
 
 export const HomeWrapper = styled.div`
-  margin-top: 20vh;
   @media screen and (max-width: 600px) {
     margin-top: 50px;
   }
@@ -17,6 +24,10 @@ export const HomeWrapper = styled.div`
 
 export const ButtonWrapper = styled.div`
   text-align: center;
+`;
+
+export const MintInProgress = styled.div`
+  margin-top: 50px;
 `;
 
 export const ContentBlock = styled.div`

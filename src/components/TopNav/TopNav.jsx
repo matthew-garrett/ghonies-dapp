@@ -1,7 +1,14 @@
 import React from "react";
-import { TopNavWrapper, NavItem, NavItemWrapper } from "./TopNav.styled";
+import { useWeb3React } from "@web3-react/core";
+import {
+  TopNavWrapper,
+  NavItem,
+  NavItemWrapper,
+  ActionButton,
+} from "./TopNav.styled";
 
-const TopNav = () => {
+const TopNav = ({ setShowWalletModal }) => {
+  const { account } = useWeb3React();
   return (
     <TopNavWrapper id="top">
       <NavItemWrapper>
@@ -33,6 +40,9 @@ const TopNav = () => {
           Faq
         </NavItem>
       </NavItemWrapper>
+      <ActionButton onClick={() => setShowWalletModal(true)}>
+        {account ? account : "CONNECT"}
+      </ActionButton>
     </TopNavWrapper>
   );
 };

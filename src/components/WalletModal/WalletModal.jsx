@@ -10,8 +10,7 @@ import {
 } from "./WalletModal.styled";
 import { injected, walletlink, walletConnect } from "../../utils/wallet";
 
-const WalletModal = (props) => {
-  const { showWalletModal, handleClose } = props;
+const WalletModal = ({ showWalletModal, handleClose }) => {
   const { activate } = useWeb3React();
   const walletConnectConnector = walletConnect;
 
@@ -24,6 +23,7 @@ const WalletModal = (props) => {
       console.log("WALLET CONNECT BS");
       await activate(walletConnectConnector);
     }
+    handleClose();
   };
 
   return (

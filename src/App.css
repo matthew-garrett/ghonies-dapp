@@ -1,6 +1,7 @@
 body {
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 20px;
   background: #161013;
   background-image: url("./images/all-grey-pow.svg");
   background-repeat: no-repeat;

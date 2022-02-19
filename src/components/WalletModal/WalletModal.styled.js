@@ -20,10 +20,9 @@ export const MetaMaskOption = styled.div`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   text-align: center;
+  transition: ease 0.5s;
   &:hover {
-    background-color: #434043;
-    color: #e2d8e1;
-    transition: background-color 0.5s ease;
+    background: #b4acb4;
   }
 `;
 export const WalletOptionsWrapper = styled.div`
@@ -36,20 +35,18 @@ export const CoinBaseOption = styled.div`
   width: 50%;
   border-right: 1px solid #161013;
   border-bottom-left-radius: 10px;
+  transition: ease 0.5s;
   &:hover {
-    background-color: #434043;
-    color: #e2d8e1;
-    transition: background-color 0.5s ease;
+    background: #b4acb4;
   }
 `;
 
 export const WalletConnectOption = styled.div`
   width: 50%;
   border-bottom-right-radius: 10px;
+  transition: ease 0.5s;
   &:hover {
-    background-color: #434043;
-    color: #e2d8e1;
-    transition: background-color 0.5s ease;
+    background: #b4acb4;
   }
 `;
 
