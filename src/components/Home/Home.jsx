@@ -8,7 +8,7 @@ import TokenCounter from "../TokenCounter";
 import { css } from "@emotion/react";
 import WalletModal from "../WalletModal";
 import { useWeb3React } from "@web3-react/core";
-import { whiteListMint, publicMint, getNetworkId } from "../../utils/wallet";
+import { whiteListMint } from "../../utils/wallet";
 import PuffLoader from "react-spinners/PuffLoader";
 import {
   ContentBlock,
