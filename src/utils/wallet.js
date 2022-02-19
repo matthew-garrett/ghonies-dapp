@@ -9,7 +9,6 @@ const ENVIRONMENT = process.env.REACT_APP_ENVIRONMENT;
 const NFT_ADDRESS = process.env.REACT_APP_NFT_ADDRESS;
 
 const acceptedChains = ENVIRONMENT === "development" ? [4] : [1, 2];
-
 const web3 = new Web3(Web3.givenProvider);
 export const testNFT = new web3.eth.Contract(TestNFT.abi, NFT_ADDRESS);
 export const injected = new InjectedConnector({
@@ -26,7 +25,15 @@ export const walletlink = new WalletLinkConnector({
   supportedChainIds: acceptedChains,
 });
 
-export const whiteListMint = async (account, numberOfTokens, proof) => {
+export const getNetworkId = async () => {
+  let result;
+  await web3.eth.net.getId().then((networkId) => {
+    result = networkId;
+  });
+  return result;
+};
+
+export const whiteListMint = (account, numberOfTokens, proof) => {
   console.log("minting whitelist...");
   const amount = (numberOfTokens * 0.02).toString();
   const amountToWei = web3.utils.toWei(amount, "ether");
@@ -51,7 +58,7 @@ export const whiteListMint = async (account, numberOfTokens, proof) => {
   return result;
 };
 
-export const publicMint = async (account, numberOfTokens) => {
+export const publicMint = (account, numberOfTokens) => {
   console.log("minting whitelist...");
   const amount = (numberOfTokens * 0.02).toString();
   const amountToWei = web3.utils.toWei(amount, "ether");

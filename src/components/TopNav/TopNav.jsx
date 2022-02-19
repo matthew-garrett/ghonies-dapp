@@ -7,8 +7,7 @@ import {
   ActionButton,
 } from "./TopNav.styled";
 
-const TopNav = ({ setShowWalletModal }) => {
-  const { account } = useWeb3React();
+const TopNav = ({ setShowWalletModal, account }) => {
   return (
     <TopNavWrapper id="top">
       <NavItemWrapper>

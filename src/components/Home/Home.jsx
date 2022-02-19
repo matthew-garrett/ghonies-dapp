@@ -8,7 +8,7 @@ import TokenCounter from "../TokenCounter";
 import { css } from "@emotion/react";
 import WalletModal from "../WalletModal";
 import { useWeb3React } from "@web3-react/core";
-import { whiteListMint, publicMint, testNFT } from "../../utils/wallet";
+import { whiteListMint, publicMint, getNetworkId } from "../../utils/wallet";
 import PuffLoader from "react-spinners/PuffLoader";
 import {
   ContentBlock,
@@ -28,7 +28,6 @@ const Home = () => {
   const [mintStatus, setMintStatus] = useState({ status: "", data: {} });
   const handleClose = () => setShowWalletModal(false);
   const { account } = useWeb3React();
-  console.log({ testNFT });
   // Whitelist Mint flow:
   // - Get account
   // - Get proof from account
@@ -57,7 +56,7 @@ const Home = () => {
     }
   }, [account, setValidProof]);
 
-  const handleWhiteListMint = async () => {
+  const handleWhiteListMint = () => {
     setMintStatus({ status: "pending", data: {} });
     whiteListMint(account, tokenCount, whiteListProof).then((data) => {
       if (data.success === true) {
@@ -68,17 +67,16 @@ const Home = () => {
     });
   };
 
-  const handlePublicMint = async () => {
-    setMintStatus({ status: "pending", data: {} });
-    publicMint(account, tokenCount).then((data) => {
-      if (data.success === true) {
-        setMintStatus({ status: "success", data: data.resp });
-      } else {
-        setMintStatus({ status: "error", data: data.resp });
-      }
-    });
-  };
-  console.log({ account });
+  // const handlePublicMint = () => {
+  //   setMintStatus({ status: "pending", data: {} });
+  //   publicMint(account, tokenCount).then((data) => {
+  //     if (data.success === true) {
+  //       setMintStatus({ status: "success", data: data.resp });
+  //     } else {
+  //       setMintStatus({ status: "error", data: data.resp });
+  //     }
+  //   });
+  // };
 
   const override = css`
     display: block;
@@ -88,7 +86,7 @@ const Home = () => {
   // const loading = account && mintStatus.status === "pending";
   return (
     <HomeWrapper>
-      <TopNav setShowWalletModal={setShowWalletModal} />
+      <TopNav setShowWalletModal={setShowWalletModal} account={account} />
       <ContentBlock>
         <Logo src={logo} className="logo" alt="logo"></Logo>
         <Description>
@@ -134,9 +132,11 @@ const Home = () => {
         {account && !validProof && mintStatus.status === "" && (
           <MintInProgress>Sorry you're not on the whitelist</MintInProgress>
         )}
-        <ActionButton onClick={() => handlePublicMint()}>
-          PUBLIC MINT
-        </ActionButton>
+        {/* {account && (
+          <ActionButton onClick={() => handlePublicMint()}>
+            PUBLIC MINT
+          </ActionButton>
+        )} */}
       </ButtonWrapper>
 
       <WalletModal
