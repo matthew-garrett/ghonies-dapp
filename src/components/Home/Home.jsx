@@ -27,7 +27,9 @@ const Home = () => {
   const [validProof, setValidProof] = useState(false);
   const [mintStatus, setMintStatus] = useState({ status: "", data: {} });
   const handleClose = () => setShowWalletModal(false);
-  const { account } = useWeb3React();
+  const { account, chainId, error } = useWeb3React();
+  const test = useWeb3React();
+  console.log({ test });
   // Whitelist Mint flow:
   // - Get account
   // - Get proof from account
@@ -84,6 +86,9 @@ const Home = () => {
     border-color: red;
   `;
   // const loading = account && mintStatus.status === "pending";
+  console.log({ chainId });
+  console.log({ account });
+  console.log({ error });
   return (
     <HomeWrapper>
       <TopNav setShowWalletModal={setShowWalletModal} account={account} />
@@ -99,44 +104,58 @@ const Home = () => {
         </Description>
       </ContentBlock>
       <ButtonWrapper>
-        {account && mintStatus.status === "pending" && (
-          <MintInProgress>
-            <div>Mint in progress</div>
-            <PuffLoader
-              color={"#e2d8e1"}
-              loading={true}
-              size={100}
-              css={override}
-            />
-          </MintInProgress>
-        )}
-        {account && mintStatus.status === "success" && (
+        {account && chainId === 4 && (
           <>
-            <div>Mint success!</div>
-            <a href={mintStatus.data} target="_blank" rel="noopener noreferrer">
-              Etherscan transaction
-            </a>
-          </>
-        )}
-        {account && validProof && mintStatus.status === "" && (
-          <>
-            <TokenCounter
-              setTokenCount={setTokenCount}
-              tokenCount={tokenCount}
-            ></TokenCounter>
-            <ActionButton onClick={() => handleWhiteListMint()}>
-              MINT WHITELIST
-            </ActionButton>
-          </>
-        )}
-        {account && !validProof && mintStatus.status === "" && (
-          <MintInProgress>Sorry you're not on the whitelist</MintInProgress>
-        )}
-        {/* {account && (
+            {mintStatus.status === "pending" && (
+              <MintInProgress>
+                <div>Mint in progress</div>
+                <PuffLoader
+                  color={"#e2d8e1"}
+                  loading={true}
+                  size={100}
+                  css={override}
+                />
+              </MintInProgress>
+            )}
+            {mintStatus.status === "success" && (
+              <>
+                <div>Mint success!</div>
+                <a
+                  href={mintStatus.data}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Etherscan transaction
+                </a>
+              </>
+            )}
+            {validProof && mintStatus.status === "" && (
+              <>
+                <TokenCounter
+                  setTokenCount={setTokenCount}
+                  tokenCount={tokenCount}
+                ></TokenCounter>
+                <ActionButton onClick={() => handleWhiteListMint()}>
+                  MINT WHITELIST
+                </ActionButton>
+              </>
+            )}
+            {!validProof && mintStatus.status === "" && (
+              <MintInProgress>Sorry you're not on the whitelist</MintInProgress>
+            )}
+            {/* {(
           <ActionButton onClick={() => handlePublicMint()}>
             PUBLIC MINT
           </ActionButton>
         )} */}
+          </>
+        )}
+        {error && error.name === "UnsupportedChainIdError" && (
+          <div>Please connect your wallet to Rinkeby</div>
+        )}
+        {error && error.name !== "UnsupportedChainIdError" && (
+          <div>{error.message}</div>
+        )}
       </ButtonWrapper>
 
       <WalletModal
