@@ -7,7 +7,6 @@ import {
 } from "./TopNav.styled";
 
 const TopNav = ({ setShowWalletModal, account }) => {
-  console.log({ account });
   return (
     <TopNavWrapper id="top">
       <NavItemWrapper>

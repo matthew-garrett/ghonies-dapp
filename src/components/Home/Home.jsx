@@ -28,8 +28,7 @@ const Home = () => {
   const [mintStatus, setMintStatus] = useState({ status: "", data: {} });
   const handleClose = () => setShowWalletModal(false);
   const { account, chainId, error } = useWeb3React();
-  const test = useWeb3React();
-  console.log({ test });
+
   // Whitelist Mint flow:
   // - Get account
   // - Get proof from account
@@ -86,9 +85,7 @@ const Home = () => {
     border-color: red;
   `;
   // const loading = account && mintStatus.status === "pending";
-  console.log({ chainId });
-  console.log({ account });
-  console.log({ error });
+
   return (
     <HomeWrapper>
       <TopNav setShowWalletModal={setShowWalletModal} account={account} />
