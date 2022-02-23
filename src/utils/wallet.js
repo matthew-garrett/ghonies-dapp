@@ -10,6 +10,7 @@ const NFT_ADDRESS = process.env.REACT_APP_NFT_ADDRESS;
 
 const acceptedChains = ENVIRONMENT === "development" ? [4] : [1, 2, 4];
 const web3 = new Web3(Web3.givenProvider);
+console.log("NFT ADDRESS", NFT_ADDRESS);
 export const testNFT = new web3.eth.Contract(TestNFT.abi, NFT_ADDRESS);
 export const injected = new InjectedConnector({
   supportedChainIds: acceptedChains,
