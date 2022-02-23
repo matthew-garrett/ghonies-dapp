@@ -37,6 +37,7 @@ export const whiteListMint = (account, numberOfTokens, proof) => {
   console.log("minting whitelist...");
   const amount = (numberOfTokens * 0.02).toString();
   const amountToWei = web3.utils.toWei(amount, "ether");
+  const testNFT = new web3.eth.Contract(TestNFT.abi, NFT_ADDRESS);
   const result = testNFT.methods
     .whiteListMint(numberOfTokens, proof)
     .send({ from: account, value: amountToWei })
