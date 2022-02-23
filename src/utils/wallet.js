@@ -3,14 +3,18 @@ import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 import { WalletLinkConnector } from "@web3-react/walletlink-connector";
 import TestNFT from "../contracts/TestNFT.json";
 import Web3 from "web3";
+import Web3EthContract from "web3-eth-contract";
 
 const INFURA_ID = process.env.REACT_APP_INFURA_ID;
 const ENVIRONMENT = process.env.REACT_APP_ENVIRONMENT;
 const NFT_ADDRESS = process.env.REACT_APP_NFT_ADDRESS;
 
 const acceptedChains = ENVIRONMENT === "development" ? [4] : [1, 2, 4];
+Web3EthContract.setProvider(Web3.givenProvider);
 const web3 = new Web3(Web3.givenProvider);
-export const testNFT = new web3.eth.Contract(TestNFT.abi, NFT_ADDRESS);
+console.log("TEST ABI: ", TestNFT.abi);
+console.log("NFT_ADDRESS: ", NFT_ADDRESS);
+export const testNFT = new Web3EthContract(TestNFT.abi, NFT_ADDRESS);
 export const injected = new InjectedConnector({
   supportedChainIds: acceptedChains,
 });
@@ -37,7 +41,7 @@ export const whiteListMint = (account, numberOfTokens, proof) => {
   console.log("minting whitelist...");
   const amount = (numberOfTokens * 0.02).toString();
   const amountToWei = web3.utils.toWei(amount, "ether");
-  const testNFT = new web3.eth.Contract(TestNFT.abi, NFT_ADDRESS);
+
   const result = testNFT.methods
     .whiteListMint(numberOfTokens, proof)
     .send({ from: account, value: amountToWei })
