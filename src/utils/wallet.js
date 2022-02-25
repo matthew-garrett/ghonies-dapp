@@ -7,10 +7,9 @@ import Web3 from "web3";
 const INFURA_ID = process.env.REACT_APP_INFURA_ID;
 const ENVIRONMENT = process.env.REACT_APP_ENVIRONMENT;
 const NFT_ADDRESS = process.env.REACT_APP_NFT_ADDRESS;
-
+console.log({ NFT_ADDRESS });
 const acceptedChains = ENVIRONMENT === "development" ? [4] : [1, 2, 4];
 const web3 = new Web3(Web3.givenProvider);
-console.log("NFT ADDRESS", NFT_ADDRESS);
 export const testNFT = new web3.eth.Contract(TestNFT.abi, NFT_ADDRESS);
 export const injected = new InjectedConnector({
   supportedChainIds: acceptedChains,
