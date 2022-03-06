@@ -20,7 +20,7 @@ const WalletModal = ({ showWalletModal, handleClose }) => {
     } else if (walletType === "metamask") {
       await activate(injected);
     } else {
-      console.log("WALLET CONNECT BS");
+      // TODO: fix this
       await activate(walletConnectConnector);
     }
     handleClose();

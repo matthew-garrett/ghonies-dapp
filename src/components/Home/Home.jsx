@@ -1,90 +1,37 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../images/blueprint-ghonie.svg";
 import TopNav from "../TopNav";
-import TokenCounter from "../TokenCounter";
+import Minter from "../Minter";
+import ErrorHandler from "../ErrorHandler";
 // import Footer from "../Footer";
 // import RoadMap from "../RoadMap";
 // import Faq from "../Faq";
-import { css } from "@emotion/react";
+import { useDispatch } from "react-redux";
 import WalletModal from "../WalletModal";
 import { useWeb3React } from "@web3-react/core";
-import { whiteListMint } from "../../utils/wallet";
-import PuffLoader from "react-spinners/PuffLoader";
 import {
-  ContentBlock,
-  Logo,
-  Description,
-  HomeWrapper,
-  ActionButton,
-  ButtonWrapper,
-  MintInProgress,
-} from "./Home.styled";
+  checkMintStatus,
+  checkConnectStatus,
+  getTotalsPending,
+} from "../../redux/actions";
+import { ContentBlock, Logo, Description, HomeWrapper } from "./Home.styled";
 
 const Home = () => {
   const [showWalletModal, setShowWalletModal] = useState(false);
-  const [tokenCount, setTokenCount] = useState(1);
-  const [whiteListProof, setWhiteListProof] = useState([]);
-  const [validProof, setValidProof] = useState(false);
-  const [mintStatus, setMintStatus] = useState({ status: "", data: {} });
   const handleClose = () => setShowWalletModal(false);
-  const { account, chainId, error } = useWeb3React();
-
-  // Whitelist Mint flow:
-  // - Get account
-  // - Get proof from account
-  // - Get NFT amount and ETH amount to send
-  // - Call whitelist mint funtion with NFT amount and ETH amount and whitelist proof
+  const { account } = useWeb3React();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (account) {
-      fetch(
-        `https://okinddneqb.execute-api.us-east-2.amazonaws.com/proof/${account}`,
-        { mode: "cors" }
-      )
-        .then((resp) => resp.json())
-        .then((proof) => {
-          if (proof.length) {
-            console.log({ proof });
-            setWhiteListProof(proof);
-            setValidProof(true);
-          } else {
-            setValidProof(false);
-          }
-        })
-        .catch((error) => {
-          console.log({ error });
-        });
+      dispatch(checkMintStatus(account));
+      dispatch(getTotalsPending());
     }
-  }, [account, setValidProof]);
+  }, [account, dispatch]);
 
-  const handleWhiteListMint = () => {
-    setMintStatus({ status: "pending", data: {} });
-    whiteListMint(account, tokenCount, whiteListProof).then((data) => {
-      if (data.success === true) {
-        setMintStatus({ status: "success", data: data.resp });
-      } else {
-        setMintStatus({ status: "error", data: data.resp });
-      }
-    });
-  };
-
-  // const handlePublicMint = () => {
-  //   setMintStatus({ status: "pending", data: {} });
-  //   publicMint(account, tokenCount).then((data) => {
-  //     if (data.success === true) {
-  //       setMintStatus({ status: "success", data: data.resp });
-  //     } else {
-  //       setMintStatus({ status: "error", data: data.resp });
-  //     }
-  //   });
-  // };
-
-  const override = css`
-    display: block;
-    margin: 30px auto;
-    border-color: red;
-  `;
-  // const loading = account && mintStatus.status === "pending";
+  useEffect(() => {
+    dispatch(checkConnectStatus());
+  }, [dispatch]);
 
   return (
     <HomeWrapper>
@@ -100,61 +47,8 @@ const Home = () => {
           join us!
         </Description>
       </ContentBlock>
-      <ButtonWrapper>
-        {account && chainId === 4 && (
-          <>
-            {mintStatus.status === "pending" && (
-              <MintInProgress>
-                <div>Mint in progress</div>
-                <PuffLoader
-                  color={"#e2d8e1"}
-                  loading={true}
-                  size={100}
-                  css={override}
-                />
-              </MintInProgress>
-            )}
-            {mintStatus.status === "success" && (
-              <>
-                <div>Mint success!</div>
-                <a
-                  href={mintStatus.data}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Etherscan transaction
-                </a>
-              </>
-            )}
-            {validProof && mintStatus.status === "" && (
-              <>
-                <TokenCounter
-                  setTokenCount={setTokenCount}
-                  tokenCount={tokenCount}
-                ></TokenCounter>
-                <ActionButton onClick={() => handleWhiteListMint()}>
-                  MINT WHITELIST
-                </ActionButton>
-              </>
-            )}
-            {!validProof && mintStatus.status === "" && (
-              <MintInProgress>Sorry you're not on the whitelist</MintInProgress>
-            )}
-            {/* {(
-          <ActionButton onClick={() => handlePublicMint()}>
-            PUBLIC MINT
-          </ActionButton>
-        )} */}
-          </>
-        )}
-        {error && error.message.includes("Unsupported") && (
-          <div>Please connect your wallet to Rinkeby</div>
-        )}
-        {error && !error.message.includes("Unsupported") && (
-          <div>{error.message}</div>
-        )}
-      </ButtonWrapper>
-
+      <Minter />
+      <ErrorHandler />
       <WalletModal
         showWalletModal={showWalletModal}
         handleClose={handleClose}

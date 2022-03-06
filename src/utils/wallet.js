@@ -7,7 +7,7 @@ import Web3 from "web3";
 const INFURA_ID = process.env.REACT_APP_INFURA_ID;
 const ENVIRONMENT = process.env.REACT_APP_ENVIRONMENT;
 const NFT_ADDRESS = process.env.REACT_APP_NFT_ADDRESS;
-console.log({ NFT_ADDRESS });
+
 const acceptedChains = ENVIRONMENT === "development" ? [4] : [1, 2, 4];
 const web3 = new Web3(Web3.givenProvider);
 export const testNFT = new web3.eth.Contract(TestNFT.abi, NFT_ADDRESS);
@@ -34,25 +34,21 @@ export const getNetworkId = async () => {
 };
 
 export const whiteListMint = (account, numberOfTokens, proof) => {
-  console.log("minting whitelist...");
-  const amount = (numberOfTokens * 0.02).toString();
+  const amount = (numberOfTokens * 0.06).toString();
   const amountToWei = web3.utils.toWei(amount, "ether");
-  console.log("METHODS: ", testNFT.methods);
   const result = testNFT.methods
     .whiteListMint(numberOfTokens, proof)
     .send({ from: account, value: amountToWei })
     .then((result) => {
-      console.log(`https://rinkeby.etherscan.io/tx/${result.transactionHash}`);
       return {
         success: true,
-        resp: `https://rinkeby.etherscan.io/tx/${result.transactionHash}`,
+        transactionLink: `https://rinkeby.etherscan.io/tx/${result.transactionHash}`,
       };
     })
     .catch((err) => {
-      console.log("Mint transaction failed!");
       return {
         success: false,
-        resp: "Something went wrong: " + err.message,
+        message: "Something went wrong: " + err.message,
       };
     });
 
@@ -60,21 +56,18 @@ export const whiteListMint = (account, numberOfTokens, proof) => {
 };
 
 export const publicMint = (account, numberOfTokens) => {
-  console.log("minting whitelist...");
-  const amount = (numberOfTokens * 0.02).toString();
+  const amount = (numberOfTokens * 0.09).toString();
   const amountToWei = web3.utils.toWei(amount, "ether");
   const result = testNFT.methods
     .publicMint(numberOfTokens)
     .send({ from: account, value: amountToWei })
     .then((result) => {
-      console.log(`https://rinkeby.etherscan.io/tx/${result.transactionHash}`);
       return {
         success: true,
-        resp: `https://rinkeby.etherscan.io/tx/${result.transactionHash}`,
+        transactionLink: `https://rinkeby.etherscan.io/tx/${result.transactionHash}`,
       };
     })
     .catch((err) => {
-      console.log("Mint transaction failed!");
       return {
         success: false,
         resp: "Something went wrong: " + err.message,

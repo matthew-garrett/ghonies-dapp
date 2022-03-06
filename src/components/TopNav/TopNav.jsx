@@ -1,4 +1,5 @@
 import React from "react";
+import { useConnectActive } from "../../redux/selectors";
 import {
   TopNavWrapper,
   NavItem,
@@ -7,6 +8,7 @@ import {
 } from "./TopNav.styled";
 
 const TopNav = ({ setShowWalletModal, account }) => {
+  const connectActive = useConnectActive();
   return (
     <TopNavWrapper id="top">
       <NavItemWrapper>
@@ -38,9 +40,11 @@ const TopNav = ({ setShowWalletModal, account }) => {
           Faq
         </NavItem>
       </NavItemWrapper>
-      <ActionButton onClick={() => setShowWalletModal(true)}>
-        {account ? account : "CONNECT"}
-      </ActionButton>
+      {connectActive && (
+        <ActionButton onClick={() => setShowWalletModal(true)}>
+          {account ? account : "CONNECT"}
+        </ActionButton>
+      )}
     </TopNavWrapper>
   );
 };
