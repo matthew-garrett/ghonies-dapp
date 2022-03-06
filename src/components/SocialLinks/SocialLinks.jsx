@@ -3,7 +3,7 @@ import discord from "../../images/discord-logo.svg";
 import insta from "../../images/instagram-logo.svg";
 import twitter from "../../images/twitter-logo.svg";
 import youtube from "../../images/youtube-logo.svg";
-import { SocialWrapper, SocialLink, SocialIcon } from "./SocialLinks.styled";
+import { SocialWrapper, SocialLink, SocialIcon } from "./ErrorHandler.styled";
 
 const SocialLinks = () => {
   return (

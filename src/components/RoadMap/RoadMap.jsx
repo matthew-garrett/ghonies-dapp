@@ -1,11 +1,11 @@
 import React from "react";
 import roadmap from "../../roadmap-heading.svg";
-import GhoniSix from "../../roadmap-6.svg";
-import GhoniFive from "../../roadmap-5.svg";
-import GhoniFour from "../../roadmap-4.svg";
-import GhoniThree from "../../roadmap-3.svg";
-import GhoniTwo from "../../roadmap-2.svg";
-import GhoniOne from "../../roadmap-1.svg";
+import GhoniSix from "../../images/roadmap-6.svg";
+import GhoniFive from "../../images/roadmap-5.svg";
+import GhoniFour from "../../images/roadmap-4.svg";
+import GhoniThree from "../../images/roadmap-3.svg";
+import GhoniTwo from "../../images/roadmap-2.svg";
+import GhoniOne from "../../images/roadmap-1.svg";
 import {
   RoadMapWrapper,
   ContainerRight,

@@ -22,14 +22,6 @@ export const HomeWrapper = styled.div`
   }
 `;
 
-export const ButtonWrapper = styled.div`
-  text-align: center;
-`;
-
-export const MintInProgress = styled.div`
-  margin-top: 50px;
-`;
-
 export const ContentBlock = styled.div`
   padding: 15px;
   display: flex;
