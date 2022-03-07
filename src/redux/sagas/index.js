@@ -1,5 +1,5 @@
 import { put, takeEvery, all } from "redux-saga/effects";
-import { testNFT, whiteListMint, publicMint } from "../../utils/wallet";
+import { YoshiContract, whiteListMint, publicMint } from "../../utils/wallet";
 import {
   whiteListMintActive,
   setErrorMessage,
@@ -25,10 +25,10 @@ import {
 // - IF merkle proof is invalid display error "you are not on the whitelist"
 
 function* whiteListMintStatus(address) {
-  const whiteListMintPaused = yield testNFT.methods
-    .whiteListMintPaused()
+  const whitelistMintEnabled = yield YoshiContract.methods
+    .whitelistMintEnabled()
     .call();
-  if (!whiteListMintPaused) {
+  if (whitelistMintEnabled) {
     const proof = yield fetch(
       `https://okinddneqb.execute-api.us-east-2.amazonaws.com/proof/${address}`,
       { mode: "cors" }
@@ -42,8 +42,10 @@ function* whiteListMintStatus(address) {
 }
 
 function* checkMintStatus({ payload: { address } }) {
-  const publicMintPaused = yield testNFT.methods.publicMintPaused().call();
-  if (publicMintPaused) {
+  const publicMintEnabled = yield YoshiContract.methods
+    .publicMintEnabled()
+    .call();
+  if (!publicMintEnabled) {
     yield whiteListMintStatus(address);
   } else {
     yield put(publicMintActive());
@@ -51,17 +53,20 @@ function* checkMintStatus({ payload: { address } }) {
 }
 
 function* getTotals() {
-  const totalSupply = yield testNFT.methods.totalSupply().call();
-  const maxSupply = yield testNFT.methods.maxSupply().call();
+  const totalSupply = yield YoshiContract.methods.totalSupply().call();
+  const maxSupply = yield YoshiContract.methods.maxSupply().call();
   yield put(setTotals(totalSupply, maxSupply));
 }
 
 function* checkConnectStatus() {
-  const publicMintPaused = yield testNFT.methods.publicMintPaused().call();
-  const whiteListMintPaused = yield testNFT.methods
-    .whiteListMintPaused()
+  console.log("test");
+  const publicMintEnabled = yield YoshiContract.methods
+    .publicMintEnabled()
     .call();
-  if (!publicMintPaused || !whiteListMintPaused) {
+  const whitelistMintEnabled = yield YoshiContract.methods
+    .whitelistMintEnabled()
+    .call();
+  if (publicMintEnabled || whitelistMintEnabled) {
     yield put(connectActive());
   }
 }
