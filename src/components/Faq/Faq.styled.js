@@ -19,9 +19,10 @@ export const ExpandIcon = styled(ExpandMoreIcon)`
 export const FaqWrapper = styled.div`
   padding: 15px;
   display: block;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
-  margin-bottom: 200px;
+  margin-bottom: 250px;
+  margin-top: 150px;
   @media screen and (max-width: 600px) {
     margin: 15px;
     padding: 0px;

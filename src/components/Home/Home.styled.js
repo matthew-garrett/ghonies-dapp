@@ -46,9 +46,9 @@ export const Description = styled.div`
   font-size: 20px;
   width: 80%;
   line-height: 35px;
-  color: white;
   padding: 35px;
   font-weight: bold;
+  color: #e2d8e1;
   @media screen and (max-width: 600px) {
     width: 100%;
     padding: 10px;

@@ -116,7 +116,7 @@ export const Content = styled.div`
   padding: 0px 50px;
   position: relative;
   border-radius: 6px;
-  color: white;
+  color: #e2d8e1;
 
   @media screen and (max-width: 600px) {
     padding-left: 5px;
@@ -141,5 +141,5 @@ export const Wrapper = styled.div`
   display: block;
   max-width: 1100px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 150px;
 `;

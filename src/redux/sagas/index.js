@@ -59,7 +59,6 @@ function* getTotals() {
 }
 
 function* checkConnectStatus() {
-  console.log("test");
   const publicMintEnabled = yield YoshiContract.methods
     .publicMintEnabled()
     .call();

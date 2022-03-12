@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import isEmail from "validator/lib/isEmail";
 import "./CustomForm.css";
-import arrow from "../../arrow-right.svg";
+import arrow from "../../images/arrow-right.svg";
 import { InputWrapper } from "./CustomForm.styled";
 const CustomForm = ({ status, message, onValidated }) => {
   const [email, setEmail] = useState("");
