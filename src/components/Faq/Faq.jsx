@@ -35,7 +35,7 @@ const Faq = () => {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Accordion 2</Typography>
+          <Typography>Accordion 3</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -50,7 +50,7 @@ const Faq = () => {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Accordion 2</Typography>
+          <Typography>Accordion 4</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -65,7 +65,7 @@ const Faq = () => {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Accordion 2</Typography>
+          <Typography>Accordion 5</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>

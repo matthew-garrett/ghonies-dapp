@@ -23,73 +23,46 @@ const RoadMap = () => {
         <ContainerLeft>
           <img src={GhoniOne} alt="ghonie"></img>
           <Content>
-            <h2>2017</h2>
-            <p>
-              Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
-              admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
-              quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
-              iusto primis ea eam.
-            </p>
+            <h2>10%</h2>
+            <p>2 dozen Ghonie give away</p>
           </Content>
         </ContainerLeft>
         <ContainerRight>
           <img src={GhoniTwo} alt="ghonie"></img>
           <Content>
-            <h2>2016</h2>
-            <p>
-              Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
-              admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
-              quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
-              iusto primis ea eam.
-            </p>
+            <h2>20%</h2>
+            <p>12 Eth in giveaways</p>
           </Content>
         </ContainerRight>
         <ContainerLeft>
           <img src={GhoniThree} alt="ghonie"></img>
           <Content>
-            <h2>2015</h2>
-            <p>
-              Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
-              admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
-              quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
-              iusto primis ea eam.
-            </p>
+            <h2>30%</h2>
+            <p>1 Dirty Half Dozen NFT dropped to a random whitelisted minter</p>
           </Content>
         </ContainerLeft>
         <ContainerRight>
           <img src={GhoniFour} alt="ghonie"></img>
           <Content>
-            <h2>2012</h2>
-            <p>
-              Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
-              admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
-              quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
-              iusto primis ea eam.
-            </p>
+            <h2>50%</h2>
+            <p>2 contests to win a Dirty Half Dozen NFT</p>
           </Content>
         </ContainerRight>
         <ContainerLeft>
           <img src={GhoniFive} alt="ghonie"></img>
           <Content>
-            <h2>2011</h2>
+            <h2>60%</h2>
             <p>
-              Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
-              admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
-              quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
-              iusto primis ea eam.
+              Create DAO to distrubte 12% of sales royalties (1% each) to DD
+              holders
             </p>
           </Content>
         </ContainerLeft>
         <ContainerRight>
           <img src={GhoniSix} alt="ghonie"></img>
           <Content>
-            <h2>2007</h2>
-            <p>
-              Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
-              admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
-              quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
-              iusto primis ea eam.
-            </p>
+            <h2>100%</h2>
+            <p>Charity 100k give away</p>
           </Content>
         </ContainerRight>
       </RoadMapWrapper>
