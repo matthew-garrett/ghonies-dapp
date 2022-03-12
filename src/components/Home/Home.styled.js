@@ -31,7 +31,7 @@ export const ContentBlock = styled.div`
 `;
 
 export const Logo = styled.img`
-  height: 350px;
+  height: 500px;
   pointer-events: none;
   flex: 1;
   @media screen and (max-width: 600px) {
