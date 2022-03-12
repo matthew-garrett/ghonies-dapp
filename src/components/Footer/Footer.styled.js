@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FooterWrapper = styled.footer`
-  height: 200px;
+  height: 100px;
   max-width: 1100px;
   border-top: 1px solid #e2d8e1;
   bottom: 0;
@@ -42,8 +42,12 @@ export const Logo = styled.img`
   pointer-events: none;
   flex: 1;
   margin: auto;
-  height: 150px;
+  height: 100px;
   @media screen and (max-width: 600px) {
     display: none;
   }
+`;
+
+export const SocialLink = styled.a`
+  cursor: pointer;
 `;

@@ -1,5 +1,6 @@
 import React from "react";
 import { useWeb3React } from "@web3-react/core";
+import MetaMask from "../../images/metamask.svg";
 import {
   CustomModal,
   ModalContentWrapper,
@@ -7,6 +8,7 @@ import {
   WalletOptionsWrapper,
   CoinBaseOption,
   WalletConnectOption,
+  MetaMaskIcon,
 } from "./WalletModal.styled";
 import { injected, walletlink, walletConnect } from "../../utils/wallet";
 
@@ -35,7 +37,10 @@ const WalletModal = ({ showWalletModal, handleClose }) => {
       >
         <ModalContentWrapper>
           <MetaMaskOption onClick={() => handleWalletConnect("metamask")}>
-            METAMASK
+            <div>
+              <div>METAMASK</div>
+              <MetaMaskIcon src={MetaMask}></MetaMaskIcon>
+            </div>
           </MetaMaskOption>
           <WalletOptionsWrapper>
             <CoinBaseOption onClick={() => handleWalletConnect("coinbase")}>

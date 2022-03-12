@@ -1,7 +1,7 @@
 import { InjectedConnector } from "@web3-react/injected-connector";
 import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 import { WalletLinkConnector } from "@web3-react/walletlink-connector";
-import TestNFT from "../contracts/TestNFT.json";
+import Yoshi from "../contracts/Yoshi.json";
 import Web3 from "web3";
 
 const INFURA_ID = process.env.REACT_APP_INFURA_ID;
@@ -10,7 +10,8 @@ const NFT_ADDRESS = process.env.REACT_APP_NFT_ADDRESS;
 
 const acceptedChains = ENVIRONMENT === "development" ? [4] : [1, 2, 4];
 const web3 = new Web3(Web3.givenProvider);
-export const testNFT = new web3.eth.Contract(TestNFT.abi, NFT_ADDRESS);
+export const YoshiContract = new web3.eth.Contract(Yoshi.abi, NFT_ADDRESS);
+
 export const injected = new InjectedConnector({
   supportedChainIds: acceptedChains,
 });
@@ -36,8 +37,8 @@ export const getNetworkId = async () => {
 export const whiteListMint = (account, numberOfTokens, proof) => {
   const amount = (numberOfTokens * 0.06).toString();
   const amountToWei = web3.utils.toWei(amount, "ether");
-  const result = testNFT.methods
-    .whiteListMint(numberOfTokens, proof)
+  const result = YoshiContract.methods
+    .whitelistMint(numberOfTokens, proof)
     .send({ from: account, value: amountToWei })
     .then((result) => {
       return {
@@ -58,7 +59,7 @@ export const whiteListMint = (account, numberOfTokens, proof) => {
 export const publicMint = (account, numberOfTokens) => {
   const amount = (numberOfTokens * 0.09).toString();
   const amountToWei = web3.utils.toWei(amount, "ether");
-  const result = testNFT.methods
+  const result = YoshiContract.methods
     .publicMint(numberOfTokens)
     .send({ from: account, value: amountToWei })
     .then((result) => {

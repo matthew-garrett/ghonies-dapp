@@ -1,5 +1,5 @@
 import React from "react";
-import roadmap from "../../roadmap-heading.svg";
+import roadmap from "../../images/roadmap-heading.svg";
 import GhoniSix from "../../images/roadmap-6.svg";
 import GhoniFive from "../../images/roadmap-5.svg";
 import GhoniFour from "../../images/roadmap-4.svg";

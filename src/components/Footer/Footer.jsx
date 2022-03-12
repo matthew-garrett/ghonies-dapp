@@ -1,15 +1,16 @@
 import React from "react";
 import MailChimpWrapper from "../MailChimpWrapper";
-import discord from "../../discord-logo.svg";
-import insta from "../../instagram-logo.svg";
-import twitter from "../../twitter-logo.svg";
-import youtube from "../../youtube-logo.svg";
-import logo from "../../ghonies-logo.svg";
+import discord from "../../images/discord-logo.svg";
+import insta from "../../images/instagram-logo.svg";
+import twitter from "../../images/twitter-logo.svg";
+import youtube from "../../images/youtube-logo.svg";
+import logo from "../../images/ghonies-logo.svg";
 import {
   FooterWrapper,
   SocialWrapper,
   FooterText,
   CenterWrapper,
+  SocialLink,
   Logo,
 } from "./Footer.styled";
 
@@ -20,12 +21,26 @@ const Footer = () => {
       <Logo src={logo} alt="logo"></Logo>
       <CenterWrapper>
         <SocialWrapper className="social">
-          <img src={discord} className="social-logo" alt="logo" />
-          <img src={insta} className="social-logo" alt="logo" />
-          <img src={twitter} className="social-logo" alt="logo" />
-          <img src={youtube} className="social-logo" alt="logo" />
+          <SocialLink href="https://discord.gg/EWUfA2tYyb" target="_blank">
+            <img src={discord} className="social-logo" alt="logo" />
+          </SocialLink>
+          <SocialLink
+            href="https://www.instagram.com/ghoniescrypto/"
+            target="_blank"
+          >
+            <img src={insta} className="social-logo" alt="logo" />
+          </SocialLink>
+          <SocialLink href="https://twitter.com/GhoniesCrypto" target="_blank">
+            <img src={twitter} className="social-logo" alt="logo" />
+          </SocialLink>
+          <SocialLink
+            href="https://www.youtube.com/channel/UCsYluGQY2asATEQIknK2Clg"
+            target="_blank"
+          >
+            <img src={youtube} className="social-logo" alt="logo" />
+          </SocialLink>
         </SocialWrapper>
-        <FooterText className="footer-text">&copy; 2021 Ghonies</FooterText>
+        <FooterText className="footer-text">&copy; 2022 Ghonies</FooterText>
       </CenterWrapper>
     </FooterWrapper>
   );

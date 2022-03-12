@@ -1,14 +1,16 @@
 import React from "react";
-import { useConnectActive } from "../../redux/selectors";
+//import { useConnectActive } from "../../redux/selectors";
+//import { useWeb3React } from "@web3-react/core";
 import {
   TopNavWrapper,
   NavItem,
   NavItemWrapper,
-  ActionButton,
+  // ActionButton,
 } from "./TopNav.styled";
 
-const TopNav = ({ setShowWalletModal, account }) => {
-  const connectActive = useConnectActive();
+const TopNav = ({ setShowWalletModal }) => {
+  // const connectActive = useConnectActive();
+  // const { account } = useWeb3React();
   return (
     <TopNavWrapper id="top">
       <NavItemWrapper>
@@ -40,11 +42,11 @@ const TopNav = ({ setShowWalletModal, account }) => {
           Faq
         </NavItem>
       </NavItemWrapper>
-      {connectActive && (
+      {/* {connectActive && (
         <ActionButton onClick={() => setShowWalletModal(true)}>
           {account ? account : "CONNECT"}
         </ActionButton>
-      )}
+      )} */}
     </TopNavWrapper>
   );
 };

@@ -21,6 +21,9 @@ export const MetaMaskOption = styled.div`
   border-top-right-radius: 10px;
   text-align: center;
   transition: ease 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &:hover {
     background: #b4acb4;
   }
@@ -51,7 +54,7 @@ export const WalletConnectOption = styled.div`
 `;
 
 export const MetaMaskIcon = styled.img`
-  width: 50px;
-  height: 50px;
-  margin: 20px;
+  width: 60px;
+  height: 60px;
+  margin: 5px;
 `;

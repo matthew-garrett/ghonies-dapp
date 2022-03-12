@@ -1,5 +1,5 @@
 import React from "react";
-import faqLogo from "../../faq-heading.svg";
+import faqLogo from "../../images/faq-heading.svg";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";

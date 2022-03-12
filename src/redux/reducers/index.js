@@ -9,6 +9,7 @@ const initialState = {
   transactionLink: "",
   totalSupply: "",
   maxSupply: "",
+  connectActive: false,
 };
 
 const reducer = (state = initialState, action) => {

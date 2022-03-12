@@ -3,9 +3,9 @@ import logo from "../../images/blueprint-ghonie.svg";
 import TopNav from "../TopNav";
 import Minter from "../Minter";
 import ErrorHandler from "../ErrorHandler";
-// import Footer from "../Footer";
-// import RoadMap from "../RoadMap";
-// import Faq from "../Faq";
+import Footer from "../Footer";
+import RoadMap from "../RoadMap";
+import Faq from "../Faq";
 import { useDispatch } from "react-redux";
 import WalletModal from "../WalletModal";
 import { useWeb3React } from "@web3-react/core";
@@ -35,7 +35,7 @@ const Home = () => {
 
   return (
     <HomeWrapper>
-      <TopNav setShowWalletModal={setShowWalletModal} account={account} />
+      <TopNav setShowWalletModal={setShowWalletModal} />
       <ContentBlock>
         <Logo src={logo} className="logo" alt="logo"></Logo>
         <Description>
@@ -53,9 +53,9 @@ const Home = () => {
         showWalletModal={showWalletModal}
         handleClose={handleClose}
       ></WalletModal>
-      {/* <RoadMap /> */}
-      {/* <Faq /> */}
-      {/* <Footer /> */}
+      <RoadMap />
+      <Faq />
+      <Footer />
     </HomeWrapper>
   );
 };
