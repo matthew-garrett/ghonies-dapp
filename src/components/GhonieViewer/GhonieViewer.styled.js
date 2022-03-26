@@ -20,6 +20,9 @@ export const ModalContent = styled.div`
   border: none;
   outline: none;
   p: 4;
+  @media screen and (max-width: 600px) {
+    top: 35%;
+  }
 `;
 
 export const TraitText = styled(Box)`
@@ -62,6 +65,11 @@ export const DisplayGhonie = styled.img`
 
 export const ModalGhonie = styled.img`
   height: 700px;
+  outline: none;
+  border: none;
+  *:focus {
+    outline: none;
+  }
   @media screen and (max-width: 600px) {
     height: 400px;
   }
