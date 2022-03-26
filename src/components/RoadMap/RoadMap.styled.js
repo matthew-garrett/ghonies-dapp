@@ -25,6 +25,8 @@ export const ContainerLeft = styled.div`
   position: relative;
   background-color: inherit;
   width: 50%;
+  display: flex;
+  margin: 5% 0px;
   &:after {
     content: "";
     position: absolute;
@@ -69,6 +71,8 @@ export const ContainerRight = styled.div`
   position: relative;
   background-color: inherit;
   width: 50%;
+  display: flex;
+  margin: 5% 0px;
   &:after {
     content: "";
     position: absolute;

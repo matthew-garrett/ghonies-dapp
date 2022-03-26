@@ -19,9 +19,7 @@ export const TopNavWrapper = styled.nav`
   display: flex;
   max-width: 1100px;
   margin: auto;
-  margin-top: 20px;
   margin-bottom: 10vh;
-  padding-bottom: 20px;
   border-bottom: 1px solid;
 `;
 

@@ -1,11 +1,11 @@
 import React from "react";
 import roadmap from "../../images/roadmap-heading.svg";
-import GhoniSix from "../../images/roadmap-6.svg";
-import GhoniFive from "../../images/roadmap-5.svg";
-import GhoniFour from "../../images/roadmap-4.svg";
-import GhoniThree from "../../images/roadmap-3.svg";
-import GhoniTwo from "../../images/roadmap-2.svg";
-import GhoniOne from "../../images/roadmap-1.svg";
+import GhoniSix from "../../images/newRoadMap/icon6.svg";
+import GhoniEight from "../../images/newRoadMap/icon8.svg";
+import GhoniTen from "../../images/newRoadMap/icon10.svg";
+import GhoniFive from "../../images/newRoadMap/icon5.svg";
+import GhoniThree from "../../images/newRoadMap/icon3.svg";
+import GhoniTwo from "../../images/newRoadMap/icon2.svg";
 import {
   RoadMapWrapper,
   ContainerRight,
@@ -21,35 +21,35 @@ const RoadMap = () => {
       <ImageHeader src={roadmap} alt="roadmap" />
       <RoadMapWrapper>
         <ContainerLeft>
-          <img src={GhoniOne} alt="ghonie"></img>
+          <img src={GhoniTwo} alt="ghonie"></img>
           <Content>
             <h2>10%</h2>
             <p>2 dozen Ghonie give away</p>
           </Content>
         </ContainerLeft>
         <ContainerRight>
-          <img src={GhoniTwo} alt="ghonie"></img>
+          <img src={GhoniThree} alt="ghonie"></img>
           <Content>
             <h2>20%</h2>
             <p>12 Eth in giveaways</p>
           </Content>
         </ContainerRight>
         <ContainerLeft>
-          <img src={GhoniThree} alt="ghonie"></img>
+          <img src={GhoniFive} alt="ghonie"></img>
           <Content>
             <h2>30%</h2>
             <p>1 Dirty Half Dozen NFT dropped to a random whitelisted minter</p>
           </Content>
         </ContainerLeft>
         <ContainerRight>
-          <img src={GhoniFour} alt="ghonie"></img>
+          <img src={GhoniSix} alt="ghonie"></img>
           <Content>
             <h2>50%</h2>
             <p>2 contests to win a Dirty Half Dozen NFT</p>
           </Content>
         </ContainerRight>
         <ContainerLeft>
-          <img src={GhoniFive} alt="ghonie"></img>
+          <img src={GhoniEight} alt="ghonie"></img>
           <Content>
             <h2>60%</h2>
             <p>
@@ -59,7 +59,7 @@ const RoadMap = () => {
           </Content>
         </ContainerLeft>
         <ContainerRight>
-          <img src={GhoniSix} alt="ghonie"></img>
+          <img src={GhoniTen} alt="ghonie"></img>
           <Content>
             <h2>100%</h2>
             <p>Charity 100k give away</p>
