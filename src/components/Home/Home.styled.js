@@ -31,27 +31,6 @@ export const ContentBlock = styled.div`
   justify-content: center;
 `;
 
-export const GhoniesWrapper = styled.div`
-  display: flex;
-  width: 100%;
-  margin: auto;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-`;
-
-export const DisplayGhonie = styled.img`
-  height: 230px;
-  padding: 10px;
-  cursor: pointer;
-  transition-duration: 0.2s;
-  transform: scale(1);
-  :hover {
-    transition-duration: 0.2s;
-    transform: scale(1.5);
-  }
-`;
-
 export const Logo = styled.img`
   height: 500px;
   pointer-events: none;
@@ -65,8 +44,8 @@ export const GhoniesJumbo = styled.img`
   pointer-events: none;
   margin: auto;
 
-  @media screen and (max-width: 600px) {
-    height: 150px;
+  @media screen and (max-width: 1000px) {
+    height: 30vw;
   }
 `;
 
