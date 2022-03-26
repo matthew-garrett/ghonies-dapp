@@ -11,6 +11,17 @@ export const TraitContainer = styled.div`
   }
 `;
 
+export const ModalContent = styled.div`
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  outline: none;
+  p: 4;
+`;
+
 export const TraitText = styled(Box)`
   text-align: left;
   margin-top: 20px;
@@ -43,6 +54,9 @@ export const DisplayGhonie = styled.img`
       transition-duration: 0.2s;
       transform: scale(1.5);
     }
+  }
+  @media screen and (max-width: 600px) {
+    height: 145px;
   }
 `;
 

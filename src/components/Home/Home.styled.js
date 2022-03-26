@@ -40,7 +40,7 @@ export const Logo = styled.img`
 `;
 
 export const GhoniesJumbo = styled.img`
-  height: 350px;
+  height: 320px;
   pointer-events: none;
   margin: auto;
 

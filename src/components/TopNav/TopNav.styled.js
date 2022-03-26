@@ -21,6 +21,9 @@ export const TopNavWrapper = styled.nav`
   margin: auto;
   margin-bottom: 10vh;
   border-bottom: 1px solid;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const ActionButton = styled.button`

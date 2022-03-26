@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const RoadMapWrapper = styled.div`
   position: relative;
   max-width: 1200px;
-  margin: 0 auto;
+  margin-left: 130px;
   &:after {
     content: "";
     position: absolute;
@@ -11,12 +11,12 @@ export const RoadMapWrapper = styled.div`
     background-color: white;
     top: 0;
     bottom: 0;
-    left: 50%;
-    margin-left: -1px;
   }
   @media screen and (max-width: 600px) {
+    margin-left: 10px;
     &:after {
       left: 18px;
+      margin-left: 0px;
     }
   }
 `;
@@ -24,35 +24,34 @@ export const RoadMapWrapper = styled.div`
 export const ContainerLeft = styled.div`
   position: relative;
   background-color: inherit;
-  width: 50%;
+  width: 100%;
   display: flex;
-  margin: 5% 0px;
+  margin-top: 5%;
+  padding-left: 45px;
+  padding-right: 25px;
+  padding-top: 30px;
   &:after {
     content: "";
     position: absolute;
-    width: 100px;
-    height: 100px;
-    right: -50px;
+    width: 150px;
+    height: 150px;
     top: 15px;
     background-color: #161013;
     border-radius: 50%;
     z-index: 1;
+    left: -75px;
   }
   img {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    right: -50px;
+    width: 150px;
+    height: 150px;
     top: 15px;
     z-index: 2;
+    left: -75px;
   }
   left: 0;
   @media screen and (max-width: 600px) {
-    width: 100%;
-    padding-left: 45px;
-    padding-right: 25px;
-    padding-top: 6px;
-
+    padding-top: 0px;
     &:after {
       left: -8px;
       width: 50px;
@@ -70,15 +69,15 @@ export const ContainerRight = styled.div`
   padding: 10px 40px;
   position: relative;
   background-color: inherit;
-  width: 50%;
+  width: 100%;
   display: flex;
   margin: 5% 0px;
   &:after {
     content: "";
     position: absolute;
-    width: 100px;
-    height: 100px;
-    right: -17px;
+    width: 150px;
+    height: 150px;
+    left: -75px;
     background-color: #161013;
     border-radius: 50%;
     top: 15px;
@@ -86,15 +85,15 @@ export const ContainerRight = styled.div`
   }
   img {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    left: -50px;
+    width: 150px;
+    height: 150px;
+    left: -75px;
     top: 15px;
     z-index: 2;
   }
   left: 50%;
   &:after {
-    left: -50px;
+    left: -75px;
   }
 
   @media screen and (max-width: 600px) {
@@ -121,7 +120,9 @@ export const Content = styled.div`
   position: relative;
   border-radius: 6px;
   color: #e2d8e1;
-
+  p {
+    font-size: 20px;
+  }
   @media screen and (max-width: 600px) {
     padding-left: 5px;
     padding-right: 0px;
@@ -145,5 +146,5 @@ export const Wrapper = styled.div`
   display: block;
   max-width: 1100px;
   margin: auto;
-  margin-top: 150px;
+  margin-top: 50px;
 `;

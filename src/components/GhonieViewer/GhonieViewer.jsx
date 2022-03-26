@@ -1,6 +1,5 @@
 import * as React from "react";
 import Backdrop from "@mui/material/Backdrop";
-import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import { GhonieData } from "./ghonieConfig.ts";
@@ -10,19 +9,8 @@ import {
   ModalGhonie,
   TraitText,
   TraitContainer,
+  ModalContent,
 } from "./GhonieViewer.styled";
-
-const style = {
-  position: "absolute",
-  textAlign: "center",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  bgcolor: "none",
-  border: "none",
-  outline: "none",
-  p: 4,
-};
 
 export const GhonieModal = () => {
   const [open, setOpen] = React.useState(false);
@@ -55,9 +43,10 @@ export const GhonieModal = () => {
         onClose={handleClose}
         closeAfterTransition
         BackdropComponent={Backdrop}
+        disableScrollLock={true}
       >
         <Fade in={open}>
-          <Box sx={style}>
+          <ModalContent>
             <ModalGhonie onClick={handleClose} src={ghonieData?.image} />
             <TraitContainer>
               {ghonieData.traits &&
@@ -67,7 +56,7 @@ export const GhonieModal = () => {
                   </TraitText>
                 ))}
             </TraitContainer>
-          </Box>
+          </ModalContent>
         </Fade>
       </Modal>
     </>

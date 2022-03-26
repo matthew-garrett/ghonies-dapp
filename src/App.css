@@ -10,6 +10,7 @@ body {
   background-size: 180vw 180vh;
   color: #e2d8e1;
   margin-bottom: 50px;
+  padding-right: 0px !important;
 }
 
 @media only screen and (max-width: 768px) {
