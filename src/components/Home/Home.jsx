@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ghoniesHeaderAlt from "../../images/ghonies-jumbo-alt.png";
 import TopNav from "../TopNav";
 import Minter from "../Minter";
@@ -6,15 +6,8 @@ import ErrorHandler from "../ErrorHandler";
 import Footer from "../Footer";
 import RoadMap from "../RoadMap";
 import Faq from "../Faq";
-import { useDispatch } from "react-redux";
 import WalletModal from "../WalletModal";
 import GhonieViewer from "../GhonieViewer";
-import { useWeb3React } from "@web3-react/core";
-import {
-  checkMintStatus,
-  checkConnectStatus,
-  getTotalsPending,
-} from "../../redux/actions";
 import {
   ContentBlock,
   Description,
@@ -25,19 +18,6 @@ import {
 const Home = () => {
   const [showWalletModal, setShowWalletModal] = useState(false);
   const handleClose = () => setShowWalletModal(false);
-  // const { account } = useWeb3React();
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   if (account) {
-  //     dispatch(checkMintStatus(account));
-  //     dispatch(getTotalsPending());
-  //   }
-  // }, [account, dispatch]);
-
-  // useEffect(() => {
-  //   dispatch(checkConnectStatus());
-  // }, [dispatch]);
 
   return (
     <HomeWrapper>
