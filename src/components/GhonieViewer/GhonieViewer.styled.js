@@ -1,3 +1,4 @@
+import CloseIcon from "@mui/icons-material/Close";
 import styled from "styled-components";
 import Box from "@mui/material/Box";
 
@@ -8,6 +9,31 @@ export const TraitContainer = styled.div`
   @media screen and (max-width: 600px) {
     top: 80%;
     left: 55%;
+  }
+`;
+
+export const CustomCloseIcon = styled(CloseIcon)`
+  position: absolute;
+  color: white;
+  top: 38%;
+  left: 95%;
+  top: 5%;
+  left: 90%;
+  cursor: pointer;
+  @media screen and (max-width: 600px) {
+    left: 75%;
+    top: -15%;
+  }
+`;
+
+export const CloseIconWrapper = styled.div`
+  position: absolute;
+  color: white;
+  height: 750px;
+  width: 750px;
+  @media screen and (max-width: 600px) {
+    height: 100%;
+    width: 100%;
   }
 `;
 
