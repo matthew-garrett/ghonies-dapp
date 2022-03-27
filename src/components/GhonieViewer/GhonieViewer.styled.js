@@ -67,8 +67,13 @@ export const ModalGhonie = styled.img`
   height: 700px;
   outline: none;
   border: none;
-  *:focus {
+  :focus {
     outline: none;
+    border: none;
+  }
+  :active {
+    outline: none;
+    border: none;
   }
   @media screen and (max-width: 600px) {
     height: 400px;

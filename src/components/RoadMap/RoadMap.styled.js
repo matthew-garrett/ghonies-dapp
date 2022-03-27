@@ -52,6 +52,8 @@ export const ContainerLeft = styled.div`
   left: 0;
   @media screen and (max-width: 600px) {
     padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
     &:after {
       left: -8px;
       width: 50px;
@@ -126,7 +128,8 @@ export const Content = styled.div`
   @media screen and (max-width: 600px) {
     padding-left: 5px;
     padding-right: 0px;
-    margin-right: 40px;
+    margin-right: 0px;
+    margin-left: 45px;
   }
 `;
 

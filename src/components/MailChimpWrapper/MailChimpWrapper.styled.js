@@ -6,6 +6,7 @@ export const EmailWrapper = styled.div`
   margin: auto;
   @media screen and (max-width: 600px) {
     margin: 20px;
+    display: none;
   }
 `;
 

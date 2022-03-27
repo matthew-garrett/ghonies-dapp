@@ -30,6 +30,13 @@ export const SocialWrapper = styled.div`
     cursor: pointer;
     margin: 10px;
   }
+  @media screen and (max-width: 600px) {
+    img {
+      width: 40px;
+      height: 40px;
+      margin: 15px;
+    }
+  }
 `;
 
 export const FooterText = styled.div`
