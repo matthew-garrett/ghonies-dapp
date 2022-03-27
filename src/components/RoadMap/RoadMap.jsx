@@ -1,5 +1,5 @@
 import React from "react";
-import roadmap from "../../images/roadmap-heading.svg";
+import roadmap from "../../images/roadmap-letters-cropped.svg";
 import { RoadMapData } from "./roadMapConfig";
 import {
   RoadMapWrapper,

@@ -10,6 +10,15 @@ export const AccordionWrapper = styled(Accordion)`
   `}
 `;
 
+export const ImageHeader = styled.img`
+  width: 167px;
+  pointer-events: none;
+  margin-top: 50px;
+  @media screen and (max-width: 600px) {
+    padding-left: 0px;
+  }
+`;
+
 export const ExpandIcon = styled(ExpandMoreIcon)`
   ${() => css`
     color: #e2d8e1 !important;
@@ -19,7 +28,7 @@ export const ExpandIcon = styled(ExpandMoreIcon)`
 export const FaqWrapper = styled.div`
   padding: 15px;
   display: block;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
   margin-bottom: 250px;
   margin-top: 150px;
@@ -28,11 +37,4 @@ export const FaqWrapper = styled.div`
     padding: 0px;
     margin-bottom: 150px;
   }
-`;
-
-export const ImageHeader = styled.img`
-  height: 45px;
-  pointer-events: none;
-  margin-top: 50px;
-  margin-bottom: 50px;
 `;

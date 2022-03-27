@@ -8,32 +8,45 @@ import IconTwo from "../../images/newRoadMap/icon2.svg";
 export const RoadMapData = [
   {
     image: IconTwo,
-    title: "10%",
-    text: "2 dozen Icone give away",
+    title: "",
+    text: "0% sold: Charity NFT auction - all proceeds go to No Kid Hungry",
   },
   {
     image: IconThree,
-    title: "20%",
-    text: "12 Eth in giveaways",
+    title: "",
+    text: "30% sold: Original analog art and NFT giveaways",
   },
   {
     image: IconFive,
-    title: "30%",
-    text: "1 Dirty Half Dozen NFT dropped to a random whitelisted minter",
+    title: "",
+    text: "60% sold: 6 Eth dropped",
   },
   {
     image: IconSix,
-    title: "10%",
-    text: "2 contests to win a Dirty Half Dozen NFT",
+    title: "",
+    text: "90% sold: Exclusive Ghonies merch store launch",
   },
   {
     image: IconEight,
-    title: "60%",
-    text: "Create DAO to distrubte 12% of sales royalties (1% each) to DD holders",
+    title: "",
+    text: "100%: Distribute 12% total revenue among 12 ambitious and lucky holders",
   },
   {
     image: IconTen,
-    title: "100%",
-    text: "Charity 100k give away",
+    title: "",
+    text: "NYC x Miami IRL events",
+  },
+  {
+    image: IconTen,
+    title: "",
+    text: "World Record breaking donut art installation",
   },
 ];
+
+// 0% Charity NFT auction - all proceeds go to No Kid Hungry
+// 30% Original analog art and NFT giveaways
+// 60% 6 Eth dropped
+// 90 % Exclusive Ghonies merch store launch
+// 100% Distribute 12% total revenue among 12 ambitious and lucky holders
+// NYC x Miami IRL events
+// World Record breaking donut art installation

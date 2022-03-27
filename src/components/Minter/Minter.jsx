@@ -33,7 +33,6 @@ export const Minter = () => {
   const override = css`
     display: block;
     margin: 30px auto;
-    border-color: red;
   `;
 
   const handleMint = () => {

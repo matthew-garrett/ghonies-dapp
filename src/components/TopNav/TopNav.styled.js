@@ -3,15 +3,11 @@ import { Link } from "react-scroll";
 export const NavItemWrapper = styled.div`
   flex: 1;
   padding: 20px;
+  display: flex;
 `;
 
 export const NavItem = styled(Link)`
   ${() => css`
-    float: left;
-    font-family: "Pinyon Script", cursive;
-    font-size: 30px;
-    margin-left: 20px;
-    font-weight: 700;
     cursor: pointer;
   `}
 `;
@@ -23,6 +19,20 @@ export const TopNavWrapper = styled.nav`
   margin-bottom: 10vh;
   @media screen and (max-width: 600px) {
     display: none;
+  }
+`;
+
+export const RoadmapItem = styled.img`
+  width: 180px;
+  @media screen and (max-width: 600px) {
+    padding-left: 0px;
+  }
+`;
+export const FaqItem = styled.img`
+  width: 115px;
+  padding-left: 20px;
+  @media screen and (max-width: 600px) {
+    padding-left: 0px;
   }
 `;
 

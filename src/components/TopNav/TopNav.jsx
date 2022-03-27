@@ -1,10 +1,14 @@
 import React from "react";
 //import { useConnectActive } from "../../redux/selectors";
 //import { useWeb3React } from "@web3-react/core";
+import roadmap from "../../images/roadmap-letters-cropped.svg";
+import faqLogo from "../../images/faq-cropped.svg";
 import SocialLinks from "../SocialLinks";
 import {
   TopNavWrapper,
   NavItem,
+  FaqItem,
+  RoadmapItem,
   NavItemWrapper,
   // ActionButton,
 } from "./TopNav.styled";
@@ -24,6 +28,7 @@ const TopNav = ({ setShowWalletModal }) => {
         >
           The Ghonies
         </NavItem> */}
+
         <NavItem
           activeClass="active"
           to="roadmap"
@@ -31,7 +36,7 @@ const TopNav = ({ setShowWalletModal }) => {
           smooth={true}
           duration={1000}
         >
-          Road Map
+          <RoadmapItem src={roadmap} alt="roadmap" />
         </NavItem>
         <NavItem
           activeClass="active"
@@ -40,7 +45,7 @@ const TopNav = ({ setShowWalletModal }) => {
           smooth={true}
           duration={1000}
         >
-          Faq
+          <FaqItem src={faqLogo} alt="faq" />
         </NavItem>
         <SocialLinks />
       </NavItemWrapper>

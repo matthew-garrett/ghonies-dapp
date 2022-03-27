@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import ghoniesHeaderAlt from "../../images/ghonies-jumbo-alt.png";
 import TopNav from "../TopNav";
-import Minter from "../Minter";
-import ErrorHandler from "../ErrorHandler";
 import Footer from "../Footer";
 import RoadMap from "../RoadMap";
 import Faq from "../Faq";
@@ -34,8 +32,8 @@ const Home = () => {
           </Description>
         </ContentBlock>
       </ContentBlock>
-      <Minter />
-      <ErrorHandler />
+      {/* <Minter /> */}
+      {/* <ErrorHandler /> */}
       <WalletModal
         showWalletModal={showWalletModal}
         handleClose={handleClose}

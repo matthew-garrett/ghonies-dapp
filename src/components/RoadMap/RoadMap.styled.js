@@ -33,21 +33,21 @@ export const ContainerLeft = styled.div`
   &:after {
     content: "";
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     top: 15px;
     background-color: #161013;
     border-radius: 50%;
     z-index: 1;
-    left: -75px;
+    left: -50px;
   }
   img {
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     top: 15px;
     z-index: 2;
-    left: -75px;
+    left: -50px;
   }
   left: 0;
   @media screen and (max-width: 600px) {
@@ -138,7 +138,6 @@ export const ImageHeader = styled.img`
   pointer-events: none;
   padding-left: 35px;
   margin-top: 50px;
-  margin-bottom: 50px;
   @media screen and (max-width: 600px) {
     padding-left: 0px;
   }
