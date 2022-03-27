@@ -67,11 +67,18 @@ export const ModalGhonie = styled.img`
   height: 700px;
   outline: none;
   border: none;
-  :focus {
+  background-color: transparent;
+  textarea:focus,
+  input:focus {
+    outline: none;
+  }
+  *:focus {
     outline: none;
     border: none;
+    background-color: transparent;
   }
   :active {
+    background-color: transparent;
     outline: none;
     border: none;
   }
