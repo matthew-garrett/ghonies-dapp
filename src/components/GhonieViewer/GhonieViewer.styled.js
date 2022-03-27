@@ -22,7 +22,7 @@ export const CustomCloseIcon = styled(CloseIcon)`
   cursor: pointer;
   @media screen and (max-width: 600px) {
     left: 75%;
-    top: -15%;
+    top: 0;
   }
 `;
 
@@ -31,6 +31,7 @@ export const CloseIconWrapper = styled.div`
   color: white;
   height: 750px;
   width: 750px;
+  z-index: 1;
   @media screen and (max-width: 600px) {
     height: 100%;
     width: 100%;
@@ -93,11 +94,8 @@ export const ModalGhonie = styled.img`
   height: 700px;
   outline: none;
   border: none;
+  z-index: 9;
   background-color: transparent;
-  textarea:focus,
-  input:focus {
-    outline: none;
-  }
   *:focus {
     outline: none;
     border: none;
