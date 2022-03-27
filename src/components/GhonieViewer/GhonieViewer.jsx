@@ -11,7 +11,6 @@ import {
   TraitContainer,
   ModalContent,
   CustomCloseIcon,
-  CloseIconWrapper,
 } from "./GhonieViewer.styled";
 
 export const GhonieModal = () => {
@@ -48,11 +47,8 @@ export const GhonieModal = () => {
         disableScrollLock={true}
       >
         <Fade in={open}>
-          <ModalContent>
-            <CloseIconWrapper onClick={handleClose}>
-              <CustomCloseIcon fontSize="large" />
-            </CloseIconWrapper>
-
+          <ModalContent onClick={handleClose}>
+            <CustomCloseIcon fontSize="large" />
             <ModalGhonie src={ghonieData?.image} />
             <TraitContainer>
               {ghonieData.traits &&

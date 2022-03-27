@@ -43,10 +43,10 @@ export const ModalContent = styled.div`
   text-align: center;
   top: 50%;
   left: 50%;
+  z-index: 1;
   transform: translate(-50%, -50%);
   border: none;
   outline: none;
-  p: 4;
   @media screen and (max-width: 600px) {
     top: 35%;
   }
