@@ -1,6 +1,7 @@
 import React from "react";
 //import { useConnectActive } from "../../redux/selectors";
 //import { useWeb3React } from "@web3-react/core";
+import SocialLinks from "../SocialLinks";
 import {
   TopNavWrapper,
   NavItem,
@@ -14,7 +15,7 @@ const TopNav = ({ setShowWalletModal }) => {
   return (
     <TopNavWrapper id="top">
       <NavItemWrapper>
-        <NavItem
+        {/* <NavItem
           activeClass="active"
           to="top"
           spy={true}
@@ -22,7 +23,7 @@ const TopNav = ({ setShowWalletModal }) => {
           duration={1000}
         >
           The Ghonies
-        </NavItem>
+        </NavItem> */}
         <NavItem
           activeClass="active"
           to="roadmap"
@@ -41,6 +42,7 @@ const TopNav = ({ setShowWalletModal }) => {
         >
           Faq
         </NavItem>
+        <SocialLinks />
       </NavItemWrapper>
       {/* {connectActive && (
         <ActionButton onClick={() => setShowWalletModal(true)}>

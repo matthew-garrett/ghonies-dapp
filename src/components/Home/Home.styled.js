@@ -40,7 +40,7 @@ export const Logo = styled.img`
 `;
 
 export const GhoniesJumbo = styled.img`
-  height: 320px;
+  height: 280px;
   pointer-events: none;
   margin: auto;
 
@@ -51,16 +51,16 @@ export const GhoniesJumbo = styled.img`
 
 export const Description = styled.div`
   width: 75%;
-  margin-top: 10px;
-  text-align: left;
+  text-align: center;
+  margin-top: 50px;
   font-size: 16px;
-  line-height: 35px;
+  line-height: 45px;
   font-weight: bold;
   color: #e2d8e1;
   @media screen and (max-width: 600px) {
     width: 100%;
     padding: 10px;
-    h3 {
+    h1 {
       font-size: 16px;
     }
   }

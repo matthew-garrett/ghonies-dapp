@@ -27,12 +27,10 @@ const Home = () => {
         <ContentBlock style={{ marginTop: "20px" }}>
           <GhonieViewer />
           <Description>
-            <h3>Arriving early 2022</h3>
-            10,000 brutally affectionate NFT’s on the Ethereum blockchain.
-            Hand-drawn and programmatically assembled in Brooklyn, New York.
-            Community-centered through revenue sharing, IRL milestones,
-            transparency and a long-term vision. Fulfill your pastriotic duty
-            and join us!
+            <h1>
+              10,000 Galactic forefathers of modern-day donuts coming to the
+              Ethereum blockchain.{" "}
+            </h1>
           </Description>
         </ContentBlock>
       </ContentBlock>

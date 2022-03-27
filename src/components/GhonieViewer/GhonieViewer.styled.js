@@ -3,22 +3,13 @@ import styled from "styled-components";
 import Box from "@mui/material/Box";
 
 export const TraitContainer = styled.div`
-  position: absolute;
-  top: 38%;
-  left: 95%;
-  @media screen and (max-width: 600px) {
-    top: 80%;
-    left: 55%;
-  }
+  margin-left: 40px;
 `;
 
 export const CustomCloseIcon = styled(CloseIcon)`
   position: absolute;
   color: white;
-  top: 38%;
-  left: 95%;
-  top: 5%;
-  left: 90%;
+
   cursor: pointer;
   @media screen and (max-width: 600px) {
     left: 75%;
@@ -47,15 +38,18 @@ export const ModalContent = styled.div`
   transform: translate(-50%, -50%);
   border: none;
   outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media screen and (max-width: 600px) {
     top: 35%;
+    display: block;
   }
 `;
 
 export const TraitText = styled(Box)`
   text-align: left;
   margin-top: 20px;
-  transform: translate(-50%, -50%);
   bgcolor: none;
   border: none;
   outline: none;
@@ -68,13 +62,15 @@ export const GhoniesWrapper = styled.div`
   display: flex;
   width: 100%;
   margin: auto;
+  max-width: 900px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 `;
 
 export const DisplayGhonie = styled.img`
-  height: 230px;
+  height: 120px;
+  margin: 25px;
   padding: 10px;
   cursor: pointer;
   transition-duration: 0.2s;
@@ -86,17 +82,17 @@ export const DisplayGhonie = styled.img`
     }
   }
   @media screen and (max-width: 600px) {
-    height: 145px;
+    height: 90px;
   }
 `;
 
 export const ModalGhonie = styled.img`
-  height: 700px;
+  height: 400px;
   outline: none;
   border: none;
   z-index: 9;
   background-color: transparent;
-  *:focus {
+  :focus {
     outline: none;
     border: none;
     background-color: transparent;
@@ -107,6 +103,6 @@ export const ModalGhonie = styled.img`
     border: none;
   }
   @media screen and (max-width: 600px) {
-    height: 400px;
+    height: 200px;
   }
 `;

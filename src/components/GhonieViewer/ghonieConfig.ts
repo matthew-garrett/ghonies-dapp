@@ -1,15 +1,13 @@
-import ghonie155 from "../../images/ghonies/155-nobg.png";
-import ghonie197 from "../../images/ghonies/197-nobg.png";
-import ghonie668 from "../../images/ghonies/668-nobg.png";
-import ghonie730 from "../../images/ghonies/730-nobg.png";
-import ghonie818 from "../../images/ghonies/818-nobg.png";
-import ghonie789 from "../../images/ghonies/789-nobg.png";
-import ghonie635 from "../../images/ghonies/635-nobg.png";
+import ghonie668 from "../../images/ghonies/668-nobg-trimmy.png";
+import ghonie730 from "../../images/ghonies/730-nobg-trimmy.png";
+import ghonie818 from "../../images/ghonies/818-nobg-trimmy.png";
+import ghonie789 from "../../images/ghonies/789-nobg-trimmy.png";
+import ghonie635 from "../../images/ghonies/635-nobg-trimmy.png";
 
 export const GhonieData = [
   {
     id: "155",
-    image: ghonie155,
+    image: ghonie668,
     traits: [
       {
         label: "Dough",
@@ -31,7 +29,7 @@ export const GhonieData = [
   },
   {
     id: "197",
-    image: ghonie197,
+    image: ghonie668,
     traits: [
       {
         label: "Dough",

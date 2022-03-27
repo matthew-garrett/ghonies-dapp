@@ -10,7 +10,6 @@ import {
   TraitText,
   TraitContainer,
   ModalContent,
-  CustomCloseIcon,
 } from "./GhonieViewer.styled";
 
 export const GhonieModal = () => {
@@ -48,12 +47,11 @@ export const GhonieModal = () => {
       >
         <Fade in={open}>
           <ModalContent onClick={handleClose}>
-            <CustomCloseIcon fontSize="large" />
             <ModalGhonie src={ghonieData?.image} />
             <TraitContainer>
               {ghonieData.traits &&
                 ghonieData?.traits.map((data, index) => (
-                  <TraitText key={`${data.label}-${ghonieData}`}>
+                  <TraitText key={`${data.label}-${ghonieData.id}`}>
                     {data.label}: {data.value}
                   </TraitText>
                 ))}

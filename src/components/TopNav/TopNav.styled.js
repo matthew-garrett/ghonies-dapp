@@ -8,7 +8,8 @@ export const NavItemWrapper = styled.div`
 export const NavItem = styled(Link)`
   ${() => css`
     float: left;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Pinyon Script", cursive;
+    font-size: 30px;
     margin-left: 20px;
     font-weight: 700;
     cursor: pointer;
@@ -17,10 +18,9 @@ export const NavItem = styled(Link)`
 
 export const TopNavWrapper = styled.nav`
   display: flex;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
   margin-bottom: 10vh;
-  border-bottom: 1px solid;
   @media screen and (max-width: 600px) {
     display: none;
   }
