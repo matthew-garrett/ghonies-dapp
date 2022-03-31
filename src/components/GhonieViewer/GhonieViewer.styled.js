@@ -54,7 +54,7 @@ export const TraitText = styled(Box)`
   border: none;
   outline: none;
   p: 4;
-  width: 200px;
+  width: 100%;
   font-size: 20px;
 `;
 

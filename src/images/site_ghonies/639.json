@@ -1,0 +1,31 @@
+{
+  "name": " #639",
+  "description": "This is a Bogus NFT project",
+  "image": "ipfs://QmfPecJLHKTJqByJKegaNecxa2PME4HvJRGyW5C787cEMj/639.png",
+  "dna": "6c1cba60294015bac4f0bc7da34e29438cf9e21a",
+  "edition": 639,
+  "date": 1648421634679,
+  "attributes": [
+    {
+      "trait_type": "dough holey clench",
+      "value": "miami_sea_dough"
+    },
+    {
+      "trait_type": "mouth holey clench uniced",
+      "value": "clench_mouth"
+    },
+    {
+      "trait_type": "icing holey clench",
+      "value": "watermelon_icing"
+    },
+    {
+      "trait_type": "mouth holey clench iced",
+      "value": "clench_mouth"
+    },
+    {
+      "trait_type": "two eyes",
+      "value": "eth_eyes"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
+}

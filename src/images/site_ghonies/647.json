@@ -1,0 +1,31 @@
+{
+  "name": " #647",
+  "description": "This is a Bogus NFT project",
+  "image": "ipfs://QmfPecJLHKTJqByJKegaNecxa2PME4HvJRGyW5C787cEMj/647.png",
+  "dna": "8a0f2ae3962738a3eb7934436c4ec6f4ce493d5e",
+  "edition": 647,
+  "date": 1648421655346,
+  "attributes": [
+    {
+      "trait_type": "dough holey o",
+      "value": "halftone_no2_choco_dough"
+    },
+    {
+      "trait_type": "mouth holey o uniced",
+      "value": "hole_mouth"
+    },
+    {
+      "trait_type": "icing holey o",
+      "value": "smoked_salmon_icing"
+    },
+    {
+      "trait_type": "mouth holey o iced",
+      "value": "hole_mouth"
+    },
+    {
+      "trait_type": "two eyes",
+      "value": "thumb_eyes"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
+}

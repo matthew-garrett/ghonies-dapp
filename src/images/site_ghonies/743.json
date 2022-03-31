@@ -1,0 +1,31 @@
+{
+  "name": " #743",
+  "description": "This is a Bogus NFT project",
+  "image": "ipfs://QmfPecJLHKTJqByJKegaNecxa2PME4HvJRGyW5C787cEMj/743.png",
+  "dna": "490f65d8bce2230e112840a658a601ce87178402",
+  "edition": 743,
+  "date": 1648421889583,
+  "attributes": [
+    {
+      "trait_type": "dough holey smirk",
+      "value": "halftone_no2_miami_sea_dough"
+    },
+    {
+      "trait_type": "mouth holey smirk uniced",
+      "value": "smirk_mouth"
+    },
+    {
+      "trait_type": "icing holey smirk",
+      "value": "pale_rose_icing"
+    },
+    {
+      "trait_type": "mouth holey smirk iced",
+      "value": "smirk_mouth"
+    },
+    {
+      "trait_type": "third eyes",
+      "value": "x_third_eye"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
+}

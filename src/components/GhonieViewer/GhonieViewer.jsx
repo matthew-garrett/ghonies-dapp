@@ -50,7 +50,7 @@ export const GhonieModal = () => {
             <ModalGhonie src={ghonieData?.image} />
             <TraitContainer>
               {ghonieData.traits &&
-                ghonieData?.traits.map((data, index) => (
+                ghonieData?.traits.map((data) => (
                   <TraitText key={`${data.label}-${ghonieData.id}`}>
                     {data.label}: {data.value}
                   </TraitText>

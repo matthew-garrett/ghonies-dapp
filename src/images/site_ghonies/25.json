@@ -1,0 +1,35 @@
+{
+  "name": " #25",
+  "description": "This is a Bogus NFT project",
+  "image": "ipfs://QmfPecJLHKTJqByJKegaNecxa2PME4HvJRGyW5C787cEMj/25.png",
+  "dna": "3eea5c9016eaddc89323e62551917f142afc8fe0",
+  "edition": 25,
+  "date": 1648420022864,
+  "attributes": [
+    {
+      "trait_type": "dough unholey",
+      "value": "choco_dough"
+    },
+    {
+      "trait_type": "icing unholey",
+      "value": "mudslide_icing"
+    },
+    {
+      "trait_type": "mouth unholey cat",
+      "value": "cat_mouth"
+    },
+    {
+      "trait_type": "cyclops eyes",
+      "value": "cyclops_moon_eye"
+    },
+    {
+      "trait_type": "sprinkles unholey",
+      "value": "rainbow_sprinkles"
+    },
+    {
+      "trait_type": "cream",
+      "value": "miami_sun_cream"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
+}

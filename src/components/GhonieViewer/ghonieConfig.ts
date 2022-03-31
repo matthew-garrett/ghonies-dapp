@@ -1,117 +1,153 @@
-import ghonie668 from "../../images/ghonies/668-nobg-trimmy.png";
-import ghonie730 from "../../images/ghonies/730-nobg-trimmy.png";
-import ghonie818 from "../../images/ghonies/818-nobg-trimmy.png";
-import ghonie789 from "../../images/ghonies/789-nobg-trimmy.png";
-import ghonie635 from "../../images/ghonies/635-nobg-trimmy.png";
+import ghonie297 from "../../images/site_ghonies/297.png";
+import ghonie584 from "../../images/site_ghonies/584.png";
+import ghonie105 from "../../images/site_ghonies/105.png";
+import ghonie180 from "../../images/site_ghonies/180.png";
+import ghonie683 from "../../images/site_ghonies/683.png";
+import ghonie560 from "../../images/site_ghonies/560.png";
+import ghonie789 from "../../images/site_ghonies/789.png";
 
 export const GhonieData = [
   {
-    id: "155",
-    image: ghonie668,
+    id: "105",
+    image: ghonie105,
     traits: [
       {
         label: "Dough",
-        value: "Green",
-      },
-      {
-        label: "Eyes",
-        value: "ETH",
-      },
-      {
-        label: "Donut Type",
-        value: "Filled",
+        value: "Miami sun",
       },
       {
         label: "Mouth",
         value: "Smirk",
+      },
+      {
+        label: "Eyes",
+        value: "Thumb",
+      },
+      {
+        label: "Sprinkles",
+        value: "Cherry bomb",
       },
     ],
   },
   {
-    id: "197",
-    image: ghonie668,
+    id: "297",
+    image: ghonie297,
     traits: [
       {
         label: "Dough",
-        value: "Green",
-      },
-      {
-        label: "Eyes",
-        value: "ETH",
-      },
-      {
-        label: "Donut Type",
-        value: "Filled",
+        value: "Banana bread",
       },
       {
         label: "Mouth",
-        value: "Smirk",
+        value: "Cat",
+      },
+      {
+        label: "Icing",
+        value: "Vanilla",
+      },
+      {
+        label: "Eyes",
+        value: "Moon",
+      },
+      {
+        label: "Sprinkles",
+        value: "Rainbow mask",
       },
     ],
   },
   {
-    id: "668",
-    image: ghonie668,
+    id: "584",
+    image: ghonie584,
     traits: [
       {
         label: "Dough",
-        value: "Green",
-      },
-      {
-        label: "Eyes",
-        value: "ETH",
-      },
-      {
-        label: "Donut Type",
-        value: "Filled",
+        value: "Miami sun",
       },
       {
         label: "Mouth",
         value: "Smirk",
+      },
+      {
+        label: "Icing",
+        value: "Lemon",
+      },
+      {
+        label: "Eyes",
+        value: "Northstar",
+      },
+      {
+        label: "Sprinkles",
+        value: "Rainbow",
       },
     ],
   },
   {
-    id: "730",
-    image: ghonie730,
+    id: "683",
+    image: ghonie683,
     traits: [
       {
         label: "Dough",
-        value: "Green",
-      },
-      {
-        label: "Eyes",
-        value: "ETH",
-      },
-      {
-        label: "Donut Type",
-        value: "Filled",
+        value: "Miami sea",
       },
       {
         label: "Mouth",
-        value: "Smirk",
+        value: "Hole O",
+      },
+      {
+        label: "Icing",
+        value: "Frost",
+      },
+      {
+        label: "Eyes",
+        value: "Peace",
       },
     ],
   },
   {
-    id: "818",
-    image: ghonie818,
+    id: "560",
+    image: ghonie560,
     traits: [
       {
         label: "Dough",
-        value: "Green",
-      },
-      {
-        label: "Eyes",
-        value: "ETH",
-      },
-      {
-        label: "Donut Type",
-        value: "Filled",
+        value: "Choco",
       },
       {
         label: "Mouth",
         value: "Smirk",
+      },
+      {
+        label: "Icing",
+        value: "Steel",
+      },
+      {
+        label: "Eyes",
+        value: "Moon",
+      },
+    ],
+  },
+  {
+    id: "180",
+    image: ghonie180,
+    traits: [
+      {
+        label: "Dough",
+        value: "Miami sun",
+      },
+      {
+        label: "Mouth",
+        value: "Cat",
+      },
+      {
+        label: "Icing",
+        value: "Pina colada",
+      },
+      {
+        label: "Eyes",
+        value: "Cyclops moon",
+      },
+      {
+        label: "Sprinkles",
+        value: "Lemon",
       },
     ],
   },
@@ -121,41 +157,19 @@ export const GhonieData = [
     traits: [
       {
         label: "Dough",
-        value: "Green",
+        value: "Miami sea",
+      },
+      {
+        label: "Mouth",
+        value: "Clench",
+      },
+      {
+        label: "Icing",
+        value: "Watermelon",
       },
       {
         label: "Eyes",
         value: "ETH",
-      },
-      {
-        label: "Donut Type",
-        value: "Filled",
-      },
-      {
-        label: "Mouth",
-        value: "Smirk",
-      },
-    ],
-  },
-  {
-    id: "635",
-    image: ghonie635,
-    traits: [
-      {
-        label: "Dough",
-        value: "Green",
-      },
-      {
-        label: "Eyes",
-        value: "ETH",
-      },
-      {
-        label: "Donut Type",
-        value: "Filled",
-      },
-      {
-        label: "Mouth",
-        value: "Smirk",
       },
     ],
   },

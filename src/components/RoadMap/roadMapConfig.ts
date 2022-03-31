@@ -9,7 +9,7 @@ export const RoadMapData = [
   {
     image: IconTwo,
     title: "",
-    text: "0% sold: Charity NFT auction - all proceeds go to No Kid Hungry",
+    text: "Pre launch: Charity NFT auction - all proceeds go to No Kid Hungry",
   },
   {
     image: IconThree,
@@ -42,11 +42,3 @@ export const RoadMapData = [
     text: "World Record breaking donut art installation",
   },
 ];
-
-// 0% Charity NFT auction - all proceeds go to No Kid Hungry
-// 30% Original analog art and NFT giveaways
-// 60% 6 Eth dropped
-// 90 % Exclusive Ghonies merch store launch
-// 100% Distribute 12% total revenue among 12 ambitious and lucky holders
-// NYC x Miami IRL events
-// World Record breaking donut art installation
