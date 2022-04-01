@@ -5,7 +5,7 @@ import Fade from "@mui/material/Fade";
 import { GhonieData } from "./ghonieConfig.ts";
 import {
   GhoniesWrapper,
-  // ModalGhonie,
+  ModalGhonie,
   TraitText,
   TraitContainer,
   ModalContent,
@@ -48,7 +48,7 @@ export const GhonieModal = () => {
       >
         <Fade in={open}>
           <ModalContent onClick={handleClose}>
-            {/* <ModalGhonie src={ghonieData?.image} /> */}
+            <ModalGhonie src={ghonieData?.image} />
             <TraitContainer>
               {ghonieData.traits &&
                 ghonieData?.traits.map((data) => (
