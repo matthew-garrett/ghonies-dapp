@@ -38,8 +38,6 @@ export const GhonieModal = () => {
         ))}
       </GhoniesWrapper>
       <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
         open={open}
         onClose={handleClose}
         closeAfterTransition
