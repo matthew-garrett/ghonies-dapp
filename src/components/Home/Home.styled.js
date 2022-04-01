@@ -53,7 +53,6 @@ export const Description = styled.div`
   width: 75%;
   text-align: center;
   margin-top: 50px;
-  font-size: 16px;
   line-height: 45px;
   font-weight: bold;
   color: #e2d8e1;
@@ -61,7 +60,8 @@ export const Description = styled.div`
     width: 100%;
     padding: 10px;
     h1 {
-      font-size: 16px;
+      font-size: 25px;
+      text-align: left;
     }
   }
 `;

@@ -37,10 +37,19 @@ export const ModalContent = styled.div`
   text-align: center;
   top: 50%;
   left: 50%;
-  z-index: 1;
+  z-index: 9;
   transform: translate(-50%, -50%);
-  border: none;
-  outline: none;
+  outline: none !important;
+  border: none !important;
+  margin: 0px !important;
+  padding: 0 !important;
+  img {
+    outline: none !important;
+    border: none !important;
+    margin: 0px !important;
+    padding: 0 !important;
+    background-color: transparent;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,7 +81,7 @@ export const GhoniesWrapper = styled.div`
 
 export const ModalGhonie = styled.img`
   height: 400px;
-  z-index: 9;
+  z-index: 1;
   outline: none !important;
   border: none !important;
   margin: 0px !important;
