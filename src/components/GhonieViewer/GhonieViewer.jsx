@@ -43,6 +43,9 @@ export const GhonieModal = () => {
         closeAfterTransition
         BackdropComponent={Backdrop}
         disableScrollLock={true}
+        BackdropProps={{
+          timeout: 500,
+        }}
       >
         <Fade in={open}>
           <ModalContent onClick={handleClose}>
