@@ -43,6 +43,8 @@ export const GhonieModal = () => {
         closeAfterTransition
         BackdropComponent={Backdrop}
         disableScrollLock={true}
+        disableAutoFocus={true}
+        disableEnforceFocus={true}
         BackdropProps={{
           timeout: 500,
         }}

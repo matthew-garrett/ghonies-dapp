@@ -82,6 +82,14 @@ export const ModalGhonie = styled.img`
   padding: 0 !important;
   background-color: transparent;
   border-image-width: 0px;
+  :focus-visible {
+    outline: none !important;
+    border: none !important;
+    margin: 0px !important;
+    padding: 0 !important;
+    background-color: transparent;
+    border-image-width: 0px;
+  }
   :focus {
     outline: none !important;
     border: none !important;
