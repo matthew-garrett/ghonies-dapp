@@ -125,6 +125,9 @@ export const Content = styled.div`
   p {
     font-size: 20px;
   }
+  a {
+    color: #e2d8e1;
+  }
   @media screen and (max-width: 600px) {
     padding-left: 5px;
     padding-right: 0px;
@@ -148,5 +151,4 @@ export const Wrapper = styled.div`
   display: block;
   max-width: 1100px;
   margin: auto;
-  margin-top: 50px;
 `;

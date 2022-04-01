@@ -5,11 +5,11 @@ import Fade from "@mui/material/Fade";
 import { GhonieData } from "./ghonieConfig.ts";
 import {
   GhoniesWrapper,
-  DisplayGhonie,
   ModalGhonie,
   TraitText,
   TraitContainer,
   ModalContent,
+  DisplayGhonie,
 } from "./GhonieViewer.styled";
 
 export const GhonieModal = () => {
@@ -33,6 +33,7 @@ export const GhonieModal = () => {
             onClick={() => handleOpen(data)}
             key={data.id}
             src={data.image}
+            type={data.type}
           ></DisplayGhonie>
         ))}
       </GhoniesWrapper>

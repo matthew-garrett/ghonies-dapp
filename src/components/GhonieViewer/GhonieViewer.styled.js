@@ -4,6 +4,9 @@ import Box from "@mui/material/Box";
 
 export const TraitContainer = styled.div`
   margin-left: 40px;
+  @media screen and (max-width: 600px) {
+    margin-left: 0px;
+  }
 `;
 
 export const CustomCloseIcon = styled(CloseIcon)`
@@ -42,8 +45,7 @@ export const ModalContent = styled.div`
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 600px) {
-    top: 35%;
-    display: block;
+    flex-wrap: wrap;
   }
 `;
 
@@ -68,24 +70,6 @@ export const GhoniesWrapper = styled.div`
   flex-wrap: wrap;
 `;
 
-export const DisplayGhonie = styled.img`
-  height: 120px;
-  margin: 25px;
-  padding: 10px;
-  cursor: pointer;
-  transition-duration: 0.2s;
-  transform: scale(1);
-  @media screen and (min-width: 600px) {
-    :hover {
-      transition-duration: 0.2s;
-      transform: scale(1.5);
-    }
-  }
-  @media screen and (max-width: 600px) {
-    height: 90px;
-  }
-`;
-
 export const ModalGhonie = styled.img`
   height: 400px;
   outline: none;
@@ -106,3 +90,29 @@ export const ModalGhonie = styled.img`
     height: 200px;
   }
 `;
+
+export const DisplayGhonie = styled("img")(
+  ({ type }) => `
+  height: ${type === "filled" ? "130px" : "120px"};
+  margin: 25px;
+  padding: 10px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  transform: scale(1);
+  @media screen and (min-width: 600px) {
+    :hover {
+      transition-duration: 0.2s;
+      transform: scale(1.5);
+    }
+  }
+  @media screen and (max-width: 600px) {
+    height: ${type === "filled" ? "100px" : "90px"};
+    padding: ${type === "filled" ? "9px" : "10px"};
+  }
+  @media screen and (max-width: 375px) {
+    height: ${type === "filled" ? "80px" : "70px"};
+    padding: ${type === "filled" ? "9px" : "10px"};
+    margin: 10px;
+  }
+  `
+);

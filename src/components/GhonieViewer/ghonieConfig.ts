@@ -10,6 +10,7 @@ export const GhonieData = [
   {
     id: "105",
     image: ghonie105,
+    type: "filled",
     traits: [
       {
         label: "Dough",
@@ -32,6 +33,7 @@ export const GhonieData = [
   {
     id: "297",
     image: ghonie297,
+    type: "hole",
     traits: [
       {
         label: "Dough",
@@ -58,6 +60,7 @@ export const GhonieData = [
   {
     id: "584",
     image: ghonie584,
+    type: "hole",
     traits: [
       {
         label: "Dough",
@@ -84,6 +87,7 @@ export const GhonieData = [
   {
     id: "683",
     image: ghonie683,
+    type: "hole",
     traits: [
       {
         label: "Dough",
@@ -106,6 +110,7 @@ export const GhonieData = [
   {
     id: "560",
     image: ghonie560,
+    type: "hole",
     traits: [
       {
         label: "Dough",
@@ -128,6 +133,7 @@ export const GhonieData = [
   {
     id: "180",
     image: ghonie180,
+    type: "filled",
     traits: [
       {
         label: "Dough",
@@ -154,6 +160,7 @@ export const GhonieData = [
   {
     id: "789",
     image: ghonie789,
+    type: "hole",
     traits: [
       {
         label: "Dough",

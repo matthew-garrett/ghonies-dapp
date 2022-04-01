@@ -11,7 +11,7 @@ import {
 
 const RoadMap = () => {
   return (
-    <Wrapper id="roadmap">
+    <Wrapper>
       <ImageHeader src={roadmap} alt="roadmap" />
       <RoadMapWrapper>
         {RoadMapData.map((data, index) => (
@@ -19,7 +19,16 @@ const RoadMap = () => {
             <img src={data.image} alt="ghonie"></img>
             <Content>
               <h2>{data.title}</h2>
-              <p>{data.text}</p>
+              {data.link ? (
+                <p>
+                  {data.text}{" "}
+                  <a href={data.link} target="_blank" rel="noopener noreferrer">
+                    No Kid Hungry
+                  </a>
+                </p>
+              ) : (
+                <p>{data.text}</p>
+              )}
             </Content>
           </ContainerLeft>
         ))}

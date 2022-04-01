@@ -31,7 +31,7 @@ export const FaqWrapper = styled.div`
   max-width: 1000px;
   margin: auto;
   margin-bottom: 250px;
-  margin-top: 150px;
+  margin-top: 60px;
   @media screen and (max-width: 600px) {
     margin: 15px;
     padding: 0px;

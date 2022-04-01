@@ -9,7 +9,8 @@ export const RoadMapData = [
   {
     image: IconTwo,
     title: "",
-    text: "Pre launch: Charity NFT auction - all proceeds go to No Kid Hungry",
+    text: "Pre launch: Charity NFT auction - all proceeds go to",
+    link: "https://www.nokidhungry.org/",
   },
   {
     image: IconThree,
