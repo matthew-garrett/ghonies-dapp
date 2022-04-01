@@ -87,12 +87,14 @@ export const ModalGhonie = styled.img`
   margin: 0px !important;
   padding: 0 !important;
   background-color: transparent;
+  border-image-width: 0px;
   :focus {
     outline: none !important;
     border: none !important;
     margin: 0px !important;
     padding: 0 !important;
     background-color: transparent;
+    border-image-width: 0px;
   }
   :active {
     outline: none !important;
@@ -100,6 +102,7 @@ export const ModalGhonie = styled.img`
     margin: 0px !important;
     padding: 0 !important;
     background-color: transparent;
+    border-image-width: 0px;
   }
   @media screen and (max-width: 600px) {
     height: 200px;
