@@ -129,12 +129,12 @@ export const DisplayGhonie = styled("img")(
     }
   }
   @media screen and (max-width: 600px) {
-    height: ${type === "filled" ? "100px" : "90px"};
+    height: ${type === "filled" ? "94px" : "90px"};
     padding: ${type === "filled" ? "9px" : "10px"};
   }
   @media screen and (max-width: 375px) {
-    height: ${type === "filled" ? "80px" : "70px"};
-    padding: ${type === "filled" ? "9px" : "10px"};
+    height: ${type === "filled" ? "74px" : "70px"};
+    padding: ${type === "filled" ? "10px" : "10px"};
     margin: 10px;
   }
   `
