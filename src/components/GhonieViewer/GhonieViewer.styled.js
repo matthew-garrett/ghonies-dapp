@@ -39,22 +39,16 @@ export const ModalContent = styled.div`
   left: 50%;
   z-index: 9;
   transform: translate(-50%, -50%);
-  outline: none !important;
-  border: none !important;
-  margin: 0px !important;
-  padding: 0 !important;
-  img {
-    outline: none !important;
-    border: none !important;
-    margin: 0px !important;
-    padding: 0 !important;
-    background-color: transparent;
-  }
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: none;
   @media screen and (max-width: 600px) {
     flex-wrap: wrap;
+    padding: 60px 10px;
+    background: #161013;
+    border-radius: 15px;
+    width: 80%;
   }
 `;
 
