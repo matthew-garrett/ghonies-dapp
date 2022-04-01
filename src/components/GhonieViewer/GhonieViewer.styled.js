@@ -73,7 +73,8 @@ export const GhoniesWrapper = styled.div`
   flex-wrap: wrap;
 `;
 
-export const ModalGhonie = styled.img`
+export const ModalGhonie = styled("img")(
+  ({ open }) => `
   height: 400px;
   z-index: 1;
   outline: none !important;
@@ -82,6 +83,7 @@ export const ModalGhonie = styled.img`
   padding: 0 !important;
   background-color: transparent;
   border-image-width: 0px;
+  display: ${!open ? "none" : ""}
   :focus-visible {
     outline: none !important;
     border: none !important;
@@ -109,7 +111,8 @@ export const ModalGhonie = styled.img`
   @media screen and (max-width: 600px) {
     height: 200px;
   }
-`;
+`
+);
 
 export const DisplayGhonie = styled("img")(
   ({ type }) => `
@@ -136,7 +139,3 @@ export const DisplayGhonie = styled("img")(
   }
   `
 );
-
-// border: none !important;
-// margin: 0px !important;
-// padding: 0 !important;

@@ -25,6 +25,8 @@ export const GhonieModal = () => {
     setGhonieData({});
   };
 
+  // Try new modal library to fix image bug
+
   return (
     <>
       <GhoniesWrapper>
@@ -43,15 +45,13 @@ export const GhonieModal = () => {
         closeAfterTransition
         BackdropComponent={Backdrop}
         disableScrollLock={true}
-        disableAutoFocus={true}
-        disableEnforceFocus={true}
         BackdropProps={{
           timeout: 500,
         }}
       >
         <Fade in={open}>
           <ModalContent onClick={handleClose}>
-            <ModalGhonie src={ghonieData.image} />
+            <ModalGhonie src={ghonieData.image} open={open} />
             <TraitContainer>
               {ghonieData.traits &&
                 ghonieData?.traits.map((data) => (
