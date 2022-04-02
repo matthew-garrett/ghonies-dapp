@@ -1,8 +1,7 @@
 import * as React from "react";
-// import Modal from "@mui/material/Modal";
-// import Fade from "@mui/material/Fade";
-import { CSSTransition } from "react-transition-group";
-import Modal from "react-modal";
+import Modal from "@mui/material/Modal";
+import Fade from "@mui/material/Fade";
+import Backdrop from "@mui/material/Backdrop";
 import { GhonieData } from "./ghonieConfig.ts";
 import {
   GhoniesWrapper,
@@ -26,16 +25,6 @@ export const GhonieModal = () => {
     setGhonieData({});
   };
 
-  const modalStyles = {
-    overlay: {
-      backgroundColor: "rgba(0, 0, 0, 0.6)",
-    },
-    content: {
-      backgroundColor: "red",
-      border: "none",
-    },
-  };
-
   // Try new modal library to fix image bug
 
   return (
@@ -50,23 +39,7 @@ export const GhonieModal = () => {
           ></DisplayGhonie>
         ))}
       </GhoniesWrapper>
-      <CSSTransition in={open} timeout={200} classNames="dialog">
-        <Modal closeTimeoutMS={300} isOpen={open} style={modalStyles}>
-          <ModalContent onClick={handleClose}>
-            <ModalGhonie src={ghonieData.image} open={open} />
-            <TraitContainer>
-              {ghonieData.traits &&
-                ghonieData?.traits.map((data) => (
-                  <TraitText key={`${data.label}-${ghonieData.id}`}>
-                    {data.label}: {data.value}
-                  </TraitText>
-                ))}
-            </TraitContainer>
-          </ModalContent>
-        </Modal>
-      </CSSTransition>
-
-      {/* <Modal
+      <Modal
         open={open}
         onClose={handleClose}
         closeAfterTransition
@@ -89,7 +62,7 @@ export const GhonieModal = () => {
             </TraitContainer>
           </ModalContent>
         </Fade>
-      </Modal> */}
+      </Modal>
     </>
   );
 };

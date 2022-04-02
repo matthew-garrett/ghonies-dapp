@@ -83,7 +83,7 @@ export const ModalGhonie = styled("img")(
   padding: 0 !important;
   background-color: transparent;
   border-image-width: 0px;
-  display: ${!open ? "none" : ""}
+  
   :focus-visible {
     outline: none !important;
     border: none !important;
@@ -110,6 +110,7 @@ export const ModalGhonie = styled("img")(
   }
   @media screen and (max-width: 600px) {
     height: 200px;
+    display: ${!open ? "none" : ""}
   }
 `
 );
