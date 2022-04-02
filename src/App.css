@@ -13,6 +13,13 @@ body {
   padding-right: 0px !important;
 }
 
+@media only screen and (max-width: 600px) {
+  body {
+    background-position: top;
+    background-size: 180vw 90vh;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .App-logo {
     height: 90vmin;

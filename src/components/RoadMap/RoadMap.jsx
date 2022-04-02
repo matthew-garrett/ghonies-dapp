@@ -12,7 +12,7 @@ import {
 const RoadMap = () => {
   return (
     <Wrapper>
-      <ImageHeader src={roadmap} alt="roadmap" />
+      <ImageHeader src={roadmap} alt="roadmap" id="roadmap" />
       <RoadMapWrapper>
         {RoadMapData.map((data, index) => (
           <ContainerLeft key={index}>
