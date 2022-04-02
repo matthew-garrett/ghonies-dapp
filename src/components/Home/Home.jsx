@@ -26,7 +26,7 @@ const Home = () => {
           <GhonieViewer />
           <Description>
             <h1>
-              10,000 Galactic forefathers of modern-day donuts coming to the
+              10,000 galactic forefathers of modern-day donuts coming to the
               Ethereum blockchain.{" "}
             </h1>
           </Description>
