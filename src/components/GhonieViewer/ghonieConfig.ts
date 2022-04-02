@@ -14,19 +14,27 @@ export const GhonieData = [
     traits: [
       {
         label: "Dough",
-        value: "Miami sun",
+        value: "Classic Halftone",
       },
       {
         label: "Mouth",
-        value: "Smirk",
+        value: "Cat",
       },
       {
         label: "Eyes",
-        value: "Thumb",
+        value: "Double Candle",
       },
       {
         label: "Sprinkles",
-        value: "Cherry bomb",
+        value: "Miami Sea",
+      },
+      {
+        label: "Cream",
+        value: "Miami Seafoam",
+      },
+      {
+        label: "Icing",
+        value: "Powder Blue",
       },
     ],
   },
@@ -37,23 +45,23 @@ export const GhonieData = [
     traits: [
       {
         label: "Dough",
-        value: "Banana bread",
+        value: "Miami Sun",
       },
       {
         label: "Mouth",
         value: "Cat",
       },
       {
-        label: "Icing",
-        value: "Vanilla",
-      },
-      {
         label: "Eyes",
-        value: "Moon",
+        value: "Cyclops Moon",
       },
       {
         label: "Sprinkles",
-        value: "Rainbow mask",
+        value: "Lemon",
+      },
+      {
+        label: "Icing",
+        value: "Pineapple Cream",
       },
     ],
   },
@@ -64,23 +72,23 @@ export const GhonieData = [
     traits: [
       {
         label: "Dough",
-        value: "Miami sun",
+        value: "Strawberry Cream",
       },
       {
         label: "Mouth",
         value: "Smirk",
       },
       {
-        label: "Icing",
-        value: "Lemon",
-      },
-      {
         label: "Eyes",
-        value: "Northstar",
+        value: "Double Northstar",
       },
       {
         label: "Sprinkles",
-        value: "Rainbow",
+        value: "Rainbow Party",
+      },
+      {
+        label: "Icing",
+        value: "Lemon",
       },
     ],
   },
@@ -91,19 +99,23 @@ export const GhonieData = [
     traits: [
       {
         label: "Dough",
-        value: "Miami sea",
+        value: "Sea Cream",
       },
       {
         label: "Mouth",
-        value: "Hole O",
-      },
-      {
-        label: "Icing",
-        value: "Frost",
+        value: "Holey O",
       },
       {
         label: "Eyes",
-        value: "Peace",
+        value: "Double Peace",
+      },
+      {
+        label: "Sprinkles",
+        value: "None",
+      },
+      {
+        label: "Icing",
+        value: "Powder Blue",
       },
     ],
   },
@@ -114,19 +126,23 @@ export const GhonieData = [
     traits: [
       {
         label: "Dough",
-        value: "Choco",
+        value: "Choco Halftone",
       },
       {
         label: "Mouth",
-        value: "Smirk",
-      },
-      {
-        label: "Icing",
-        value: "Steel",
+        value: "Holey O",
       },
       {
         label: "Eyes",
-        value: "Moon",
+        value: "Double Cherries",
+      },
+      {
+        label: "Sprinkles",
+        value: "Blue Beard",
+      },
+      {
+        label: "Icing",
+        value: "Miami Sun",
       },
     ],
   },
@@ -137,23 +153,23 @@ export const GhonieData = [
     traits: [
       {
         label: "Dough",
-        value: "Miami sun",
+        value: "Newsprint",
       },
       {
         label: "Mouth",
-        value: "Cat",
-      },
-      {
-        label: "Icing",
-        value: "Pina colada",
+        value: "Smirk",
       },
       {
         label: "Eyes",
-        value: "Cyclops moon",
+        value: "Double Tomb",
       },
       {
         label: "Sprinkles",
-        value: "Lemon",
+        value: "None",
+      },
+      {
+        label: "Icing",
+        value: "Lavender",
       },
     ],
   },
@@ -164,19 +180,23 @@ export const GhonieData = [
     traits: [
       {
         label: "Dough",
-        value: "Miami sea",
+        value: "Miami Sea Halftone",
       },
       {
         label: "Mouth",
-        value: "Clench",
-      },
-      {
-        label: "Icing",
-        value: "Watermelon",
+        value: "Smirk",
       },
       {
         label: "Eyes",
-        value: "ETH",
+        value: "Triple X",
+      },
+      {
+        label: "Sprinkles",
+        value: "Miami Sea Party",
+      },
+      {
+        label: "Icing",
+        value: "Bubblegum",
       },
     ],
   },
