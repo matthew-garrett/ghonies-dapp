@@ -31,7 +31,7 @@ export const GhonieModal = () => {
       backgroundColor: "rgba(0, 0, 0, 0.6)",
     },
     content: {
-      backgroundColor: "transparent",
+      backgroundColor: "red",
       border: "none",
     },
   };
