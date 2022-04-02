@@ -7,6 +7,9 @@ export const AccordionWrapper = styled(Accordion)`
     background: #2d272a !important;
     color: #e2d8e1 !important;
     font-family: "Montserrat", sans-serif;
+    a {
+      color: #e2d8e1 !important;
+    }
   `}
 `;
 

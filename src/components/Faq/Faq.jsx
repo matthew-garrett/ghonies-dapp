@@ -145,7 +145,14 @@ const Faq = () => {
             <br />
             <br />
             Charity: We are committed to holding regular auctions and
-            fundraisers to support No Kid Hungry
+            fundraisers to support{" "}
+            <a
+              href="https://www.nokidhungry.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              No Kid Hungry
+            </a>{" "}
             <br />
             <br />
             IRL: Aside from our planned world recording breaking donut
@@ -212,8 +219,14 @@ const Faq = () => {
               fontWeight: "bold",
             }}
           >
-            Ledger explains it better than we can:
-            https://www.ledger.com/academy/how-to-secure-your-nfts
+            <a
+              href="https://www.ledger.com/academy/how-to-secure-your-nfts"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ledger
+            </a>{" "}
+            explains it better than we can
           </Typography>
         </AccordionDetails>
       </AccordionWrapper>
