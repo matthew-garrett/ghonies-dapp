@@ -43,6 +43,7 @@ export const ModalContent = styled.div`
   justify-content: center;
   align-items: center;
   outline: none;
+
   @media screen and (max-width: 600px) {
     flex-wrap: wrap;
     padding: 60px 10px;
@@ -58,7 +59,6 @@ export const TraitText = styled(Box)`
   bgcolor: none;
   border: none;
   outline: none;
-  p: 4;
   width: 100%;
   font-size: 20px;
 `;

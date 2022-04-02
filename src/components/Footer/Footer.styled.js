@@ -49,7 +49,7 @@ export const Logo = styled.img`
   pointer-events: none;
   flex: 1;
   margin: auto;
-  height: 100px;
+  height: 200px;
   @media screen and (max-width: 600px) {
     display: none;
   }

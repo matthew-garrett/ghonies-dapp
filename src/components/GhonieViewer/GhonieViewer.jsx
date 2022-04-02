@@ -48,6 +48,7 @@ export const GhonieModal = () => {
         BackdropProps={{
           timeout: 500,
         }}
+        sx={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
       >
         <Fade in={open}>
           <ModalContent onClick={handleClose}>
