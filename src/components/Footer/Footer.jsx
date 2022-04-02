@@ -4,7 +4,7 @@ import discord from "../../images/discord-logo.svg";
 import insta from "../../images/instagram-logo.svg";
 import twitter from "../../images/twitter-logo.svg";
 import youtube from "../../images/youtube-logo.svg";
-import logo from "../../images/ghonies-logo.svg";
+import logo from "../../images/ghonies-footer-logo.svg";
 import {
   FooterWrapper,
   SocialWrapper,
