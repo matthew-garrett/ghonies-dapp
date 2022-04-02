@@ -1,10 +1,10 @@
-import ghonie297 from "../../images/site_ghonies/297.png";
-import ghonie584 from "../../images/site_ghonies/584.png";
-import ghonie105 from "../../images/site_ghonies/105.png";
-import ghonie180 from "../../images/site_ghonies/180.png";
-import ghonie683 from "../../images/site_ghonies/683.png";
-import ghonie560 from "../../images/site_ghonies/560.png";
-import ghonie789 from "../../images/site_ghonies/789.png";
+import ghonie297 from "../../images/tinified/297.png";
+import ghonie584 from "../../images/tinified/584.png";
+import ghonie105 from "../../images/tinified/105.png";
+import ghonie180 from "../../images/tinified/180.png";
+import ghonie683 from "../../images/tinified/683.png";
+import ghonie560 from "../../images/tinified/560.png";
+import ghonie789 from "../../images/tinified/789.png";
 
 export const GhonieData = [
   {
