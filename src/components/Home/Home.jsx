@@ -6,6 +6,8 @@ import RoadMap from "../RoadMap";
 import Faq from "../Faq";
 import WalletModal from "../WalletModal";
 import GhonieViewer from "../GhonieViewer";
+import Minter from "../Minter";
+import ErrorHandler from "../ErrorHandler";
 import {
   ContentBlock,
   Description,
@@ -32,8 +34,8 @@ const Home = () => {
           </Description>
         </ContentBlock>
       </ContentBlock>
-      {/* <Minter /> */}
-      {/* <ErrorHandler /> */}
+      <Minter />
+      <ErrorHandler />
       <WalletModal
         showWalletModal={showWalletModal}
         handleClose={handleClose}

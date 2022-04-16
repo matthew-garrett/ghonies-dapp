@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PuffLoader from "react-spinners/PuffLoader";
 import { useDispatch } from "react-redux";
 import TokenCounter from "../TokenCounter";
@@ -18,7 +18,11 @@ import {
   useTranactionLink,
   usePublicMintStatus,
 } from "../../redux/selectors";
-import { whiteListMintPending, publicMintPending } from "../../redux/actions";
+import {
+  whiteListMintPending,
+  publicMintPending,
+  checkMintStatus,
+} from "../../redux/actions";
 import { useWeb3React } from "@web3-react/core";
 export const Minter = () => {
   const { account, chainId } = useWeb3React();
