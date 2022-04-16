@@ -1,5 +1,5 @@
 import React from "react";
-import { useWeb3React } from "@web3-react/core";
+import { useConnect, useAccount } from "wagmi";
 import MetaMask from "../../images/metamask.svg";
 import {
   CustomModal,
@@ -10,22 +10,16 @@ import {
   WalletConnectOption,
   MetaMaskIcon,
 } from "./WalletModal.styled";
-import { injected, walletlink, walletConnect } from "../../utils/wallet";
 
 const WalletModal = ({ showWalletModal, handleClose }) => {
-  const { activate } = useWeb3React();
-  const walletConnectConnector = walletConnect;
+  const [{ data: connectData, error: connectError }, connect] = useConnect();
+  const [{ data: accountData }, disconnect] = useAccount({
+    fetchEns: true,
+  });
 
-  const handleWalletConnect = async (walletType) => {
-    if (walletType === "coinbase") {
-      await activate(walletlink);
-    } else if (walletType === "metamask") {
-      await activate(injected);
-    } else {
-      // TODO: fix this
-      await activate(walletConnectConnector);
-    }
+  const handleConnect = (connector) => {
     handleClose();
+    connect(connector);
   };
 
   return (
@@ -36,6 +30,30 @@ const WalletModal = ({ showWalletModal, handleClose }) => {
         onBackdropClick={handleClose}
       >
         <ModalContentWrapper>
+          {!connectData.connected &&
+            connectData.connectors.map((connector) => {
+              return (
+                <MetaMaskOption
+                  disabled={!connector.ready}
+                  key={connector.id}
+                  onClick={() => handleConnect(connector)}
+                >
+                  {connector.name}
+                  {!connector.ready && " (unsupported)"}
+                </MetaMaskOption>
+              );
+            })}
+          {connectData.connected && (
+            <MetaMaskOption onClick={disconnect}>
+              Disconnect Wallet
+            </MetaMaskOption>
+          )}
+
+          {connectError && (
+            <div>{connectError?.message ?? "Failed to connect"}</div>
+          )}
+        </ModalContentWrapper>
+        {/* <ModalContentWrapper>
           <MetaMaskOption onClick={() => handleWalletConnect("metamask")}>
             <div>
               <div>METAMASK</div>
@@ -52,7 +70,7 @@ const WalletModal = ({ showWalletModal, handleClose }) => {
               WALLET CONNECT
             </WalletConnectOption>
           </WalletOptionsWrapper>
-        </ModalContentWrapper>
+        </ModalContentWrapper> */}
       </CustomModal>
     </>
   );

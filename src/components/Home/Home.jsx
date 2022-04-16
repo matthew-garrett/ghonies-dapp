@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { checkConnectStatus } from "../../redux/actions";
 import ghoniesHeaderAlt from "../../images/ghonies-jumbo-alt.png";
 import TopNav from "../TopNav";
 import Footer from "../Footer";
 import RoadMap from "../RoadMap";
 import Faq from "../Faq";
+import Minter from "../Minter";
 import WalletModal from "../WalletModal";
 import GhonieViewer from "../GhonieViewer";
 import {
@@ -13,9 +16,16 @@ import {
   GhoniesJumbo,
 } from "./Home.styled";
 
+// checkConnectStatus
+
 const Home = () => {
+  const dispatch = useDispatch();
   const [showWalletModal, setShowWalletModal] = useState(false);
   const handleClose = () => setShowWalletModal(false);
+
+  useEffect(() => {
+    dispatch(checkConnectStatus());
+  }, [dispatch, checkConnectStatus]);
 
   return (
     <HomeWrapper>
@@ -32,7 +42,7 @@ const Home = () => {
           </Description>
         </ContentBlock>
       </ContentBlock>
-      {/* <Minter /> */}
+      <Minter />
       {/* <ErrorHandler /> */}
       <WalletModal
         showWalletModal={showWalletModal}

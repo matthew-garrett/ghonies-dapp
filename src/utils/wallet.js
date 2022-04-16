@@ -1,30 +1,11 @@
-import { InjectedConnector } from "@web3-react/injected-connector";
-import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
-import { WalletLinkConnector } from "@web3-react/walletlink-connector";
 import Yoshi from "../contracts/Yoshi.json";
 import Web3 from "web3";
 
-const INFURA_ID = process.env.REACT_APP_INFURA_ID;
 const ENVIRONMENT = process.env.REACT_APP_ENVIRONMENT;
 const NFT_ADDRESS = process.env.REACT_APP_NFT_ADDRESS;
 
-const acceptedChains = ENVIRONMENT === "development" ? [4] : [1, 2, 4];
 const web3 = new Web3(Web3.givenProvider);
 export const YoshiContract = new web3.eth.Contract(Yoshi.abi, NFT_ADDRESS);
-
-export const injected = new InjectedConnector({
-  supportedChainIds: acceptedChains,
-});
-
-export const walletConnect = new WalletConnectConnector({
-  infuraId: INFURA_ID,
-  supportedChainIds: acceptedChains,
-});
-
-export const walletlink = new WalletLinkConnector({
-  appName: "Ghonies Dapp",
-  supportedChainIds: acceptedChains,
-});
 
 export const getNetworkId = async () => {
   let result;

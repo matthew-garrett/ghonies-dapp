@@ -11,6 +11,7 @@ import {
   TranactionLink,
   MintSuccessWrapper,
 } from "./Minter.styled";
+import { useAccount } from "wagmi";
 import {
   useWhiteListMintActive,
   useProof,
@@ -19,9 +20,11 @@ import {
   usePublicMintStatus,
 } from "../../redux/selectors";
 import { whiteListMintPending, publicMintPending } from "../../redux/actions";
-import { useWeb3React } from "@web3-react/core";
+
 export const Minter = () => {
-  const { account, chainId } = useWeb3React();
+  const [{ data: accountData }] = useAccount({
+    fetchEns: true,
+  });
   const [tokenCount, setTokenCount] = useState(1);
   const whiteListMintActive = useWhiteListMintActive();
   const publicMintActive = usePublicMintStatus();
@@ -37,17 +40,17 @@ export const Minter = () => {
 
   const handleMint = () => {
     if (publicMintActive) {
-      dispatch(publicMintPending(account, tokenCount));
+      dispatch(publicMintPending(accountData.address, tokenCount));
     }
     if (whiteListMintActive) {
-      dispatch(whiteListMintPending(account, tokenCount, proof));
+      dispatch(whiteListMintPending(accountData.address, tokenCount, proof));
     }
   };
   const showMinter = whiteListMintActive || publicMintActive;
 
   return (
     <MinterContainer>
-      {showMinter && chainId === 4 && mintStatus === "" && (
+      {showMinter && mintStatus === "" && (
         <ButtonWrapper>
           <TokenCounter
             setTokenCount={setTokenCount}

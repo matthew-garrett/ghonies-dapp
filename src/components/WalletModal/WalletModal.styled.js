@@ -16,7 +16,7 @@ export const ModalContentWrapper = styled.div`
 
 export const MetaMaskOption = styled.div`
   width: 100%;
-  height: 50%;
+  height: 100px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   text-align: center;

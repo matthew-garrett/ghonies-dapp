@@ -1,6 +1,5 @@
 import React from "react";
-//import { useConnectActive } from "../../redux/selectors";
-//import { useWeb3React } from "@web3-react/core";
+import { useAccount, useConnect } from "wagmi";
 import roadmap from "../../images/roadmap-letters-cropped.svg";
 import faqLogo from "../../images/faq-cropped.svg";
 import SocialLinks from "../SocialLinks";
@@ -10,25 +9,18 @@ import {
   FaqItem,
   RoadmapItem,
   NavItemWrapper,
-  // ActionButton,
+  ActionButton,
 } from "./TopNav.styled";
 
 const TopNav = ({ setShowWalletModal }) => {
-  // const connectActive = useConnectActive();
-  // const { account } = useWeb3React();
+  const [{ data: connectData, error: connectError }, connect] = useConnect();
+  const [{ data: accountData }, disconnect] = useAccount({
+    fetchEns: true,
+  });
+
   return (
     <TopNavWrapper id="top">
       <NavItemWrapper>
-        {/* <NavItem
-          activeClass="active"
-          to="top"
-          spy={true}
-          smooth={true}
-          duration={1000}
-        >
-          The Ghonies
-        </NavItem> */}
-
         <NavItem
           activeClass="active"
           to="roadmap"
@@ -49,11 +41,11 @@ const TopNav = ({ setShowWalletModal }) => {
         </NavItem>
         <SocialLinks />
       </NavItemWrapper>
-      {/* {connectActive && (
+      <div style={{ margin: "auto" }}>
         <ActionButton onClick={() => setShowWalletModal(true)}>
-          {account ? account : "CONNECT"}
+          {!connectData.connected ? "CONNECT" : accountData.address}
         </ActionButton>
-      )} */}
+      </div>
     </TopNavWrapper>
   );
 };
