@@ -6,7 +6,13 @@ export const NavItemWrapper = styled.div`
   display: flex;
 `;
 
-export const NavItem = styled(Link)`
+export const NavLink = styled(Link)`
+  ${() => css`
+    cursor: pointer;
+  `}
+`;
+
+export const NavItem = styled.a`
   ${() => css`
     cursor: pointer;
   `}
@@ -14,7 +20,7 @@ export const NavItem = styled(Link)`
 
 export const TopNavWrapper = styled.nav`
   display: flex;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   margin-bottom: 10vh;
   @media screen and (max-width: 600px) {
@@ -23,14 +29,23 @@ export const TopNavWrapper = styled.nav`
 `;
 
 export const RoadmapItem = styled.img`
-  width: 180px;
+  width: 153px;
   @media screen and (max-width: 600px) {
     padding-left: 0px;
   }
 `;
 export const FaqItem = styled.img`
-  width: 115px;
+  width: 100px;
   padding-left: 20px;
+  padding-top: 2px;
+  @media screen and (max-width: 600px) {
+    padding-left: 0px;
+  }
+`;
+export const WhitePaperItem = styled.img`
+  width: 173px;
+  padding-left: 20px;
+  padding-top: 2px;
   @media screen and (max-width: 600px) {
     padding-left: 0px;
   }
