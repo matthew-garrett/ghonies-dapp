@@ -39,7 +39,7 @@ const TopNav = ({ setShowWalletModal }) => {
         <NavItem
           activeClass="active"
           target="_blank"
-          href="https://ghonies-dapp.s3.us-east-2.amazonaws.com/ghonies-whitepaper.pdf"
+          href="https://ghonies-dapp.s3.us-east-2.amazonaws.com/whitepaper.pdf"
         >
           <WhitePaperItem src={whitepaperLogo} alt="whitepaper" />
         </NavItem>
