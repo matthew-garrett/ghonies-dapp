@@ -22,6 +22,20 @@ export const ImageHeader = styled.img`
   }
 `;
 
+export const WhitePaperLink = styled.a`
+  display: flex;
+  justify-content: center;
+`;
+
+export const WhitePaperImage = styled.img`
+  display: none;
+  @media screen and (max-width: 600px) {
+    width: 290px;
+    margin-bottom: 100px;
+    display: block;
+  }
+`;
+
 export const ExpandIcon = styled(ExpandMoreIcon)`
   ${() => css`
     color: #e2d8e1 !important;
@@ -38,6 +52,6 @@ export const FaqWrapper = styled.div`
   @media screen and (max-width: 600px) {
     margin: 15px;
     padding: 0px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
   }
 `;
