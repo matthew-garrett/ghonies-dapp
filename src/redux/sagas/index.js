@@ -8,6 +8,7 @@ import {
   mintReset,
   publicMintActive,
   setTotals,
+  setProof,
 } from "../actions";
 
 // WALLET CONNECT NOTES;
@@ -24,31 +25,15 @@ import {
 // - IF merkle proof is valid display whiteListMint stuff
 // - IF merkle proof is invalid display error "you are not on the whitelist"
 
-function* whiteListMintStatus(address) {
-  const whitelistMintEnabled = yield YoshiContract.methods
-    .whitelistMintEnabled()
-    .call();
-  if (whitelistMintEnabled) {
-    const proof = yield fetch(
-      `https://okinddneqb.execute-api.us-east-2.amazonaws.com/proof/${address}`,
-      { mode: "cors" }
-    ).then((resp) => resp.json());
-    if (proof.length) {
-      yield put(whiteListMintActive(proof));
-    } else {
-      yield put(setErrorMessage("Sorry, you are not on the whitelist"));
-    }
-  }
-}
-
 function* checkMintStatus({ payload: { address } }) {
-  const publicMintEnabled = yield YoshiContract.methods
-    .publicMintEnabled()
-    .call();
-  if (!publicMintEnabled) {
-    yield whiteListMintStatus(address);
+  const proof = yield fetch(
+    `https://okinddneqb.execute-api.us-east-2.amazonaws.com/proof/${address}`,
+    { mode: "cors" }
+  ).then((resp) => resp.json());
+  if (proof.length) {
+    yield put(setProof(proof));
   } else {
-    yield put(publicMintActive());
+    yield put(setErrorMessage("Sorry, you are not on the whitelist"));
   }
 }
 
@@ -62,9 +47,16 @@ function* checkConnectStatus() {
   const publicMintEnabled = yield YoshiContract.methods
     .publicMintEnabled()
     .call();
+  if (publicMintEnabled) {
+    yield put(publicMintActive());
+  }
   const whitelistMintEnabled = yield YoshiContract.methods
     .whitelistMintEnabled()
     .call();
+  if (whitelistMintEnabled) {
+    // DO WHITE LIST MINT STUFF
+    yield put(whiteListMintActive());
+  }
   if (publicMintEnabled || whitelistMintEnabled) {
     yield put(connectActive());
   }

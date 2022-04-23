@@ -1,5 +1,9 @@
-export const whiteListMintActive = (proof) => ({
+export const whiteListMintActive = () => ({
   type: "WHITE_LIST_MINT_ACTIVE",
+});
+
+export const setProof = (proof) => ({
+  type: "SET_PROOF",
   payload: { proof },
 });
 

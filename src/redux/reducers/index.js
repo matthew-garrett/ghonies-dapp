@@ -10,6 +10,8 @@ const initialState = {
   totalSupply: "",
   maxSupply: "",
   connectActive: false,
+  whiteListPrice: "0.06",
+  publicPrice: "0.09",
 };
 
 const reducer = (state = initialState, action) => {
@@ -29,7 +31,6 @@ const reducer = (state = initialState, action) => {
     case "WHITE_LIST_MINT_ACTIVE":
       return {
         ...state,
-        proof: action.payload.proof,
         whiteListMintActive: true,
       };
     case "PUBLIC_MINT_ACTIVE":
@@ -77,6 +78,11 @@ const reducer = (state = initialState, action) => {
         mintStatus: "",
         transactionLink: "",
         errorMessage: "",
+      };
+    case "SET_PROOF":
+      return {
+        ...state,
+        proof: action.payload.proof,
       };
     case "SET_TOTALS":
       return {
